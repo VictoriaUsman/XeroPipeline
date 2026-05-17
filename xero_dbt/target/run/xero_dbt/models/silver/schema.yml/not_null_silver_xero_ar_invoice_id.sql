@@ -1,0 +1,24 @@
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select invoice_id
+from "xero_smoke"."public_silver"."silver_xero_ar"
+where invoice_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test

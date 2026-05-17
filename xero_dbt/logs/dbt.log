@@ -1,0 +1,2783 @@
+[0m14:14:40.112813 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10822ecf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10983b390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10983b610>]}
+
+
+============================== 14:14:40.115909 | 749717b4-ef49-412e-a8e0-b9dbc855ac3e ==============================
+[0m14:14:40.115909 [info ] [MainThread]: Running with dbt=1.11.3
+[0m14:14:40.116222 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'write_json': 'True', 'fail_fast': 'False', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'log_format': 'default', 'cache_selected_only': 'False', 'warn_error': 'None', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'introspect': 'True', 'no_print': 'None', 'profiles_dir': '.', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'partial_parse': 'True', 'printer_width': '80', 'invocation_command': 'dbt build --profiles-dir . --target smoke --select bronze silver gold', 'log_path': '/Users/iantristancultura/Documents/Data Engineer/AWS Cars/XERO/xero_dbt/logs', 'version_check': 'True', 'debug': 'False', 'target_path': 'None', 'quiet': 'False'}
+[0m14:14:40.249064 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108b45a70>]}
+[0m14:14:40.288889 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10768e250>]}
+[0m14:14:40.289701 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m14:14:40.358774 [debug] [MainThread]: checksum: 9a2a23e7f2804dc3d30f6974de09d96a2397d4a44b043c29c65ccaf5affd63bf, vars: {}, profile: , target: smoke, version: 1.11.3
+[0m14:14:40.359237 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m14:14:40.359445 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1098b6550>]}
+[0m14:14:41.010118 [warn ] [MainThread]: [[33mWARNING[0m][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+functionality
+Found top-level arguments to test `accepted_values` defined on
+'bronze_xero_invoices' in package 'xero_dbt' (models/bronze/schema.yml).
+Arguments to generic tests should be nested under the `arguments` property.
+[0m14:14:41.010417 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a84da90>]}
+[0m14:14:41.103293 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10acbd0f0>]}
+[0m14:14:41.149230 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/iantristancultura/Documents/Data Engineer/AWS Cars/XERO/xero_dbt/target/manifest.json
+[0m14:14:41.150595 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/iantristancultura/Documents/Data Engineer/AWS Cars/XERO/xero_dbt/target/semantic_manifest.json
+[0m14:14:41.178304 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ae2edd0>]}
+[0m14:14:41.178583 [info ] [MainThread]: Found 15 models, 25 data tests, 6 sources, 464 macros
+[0m14:14:41.181210 [info ] [MainThread]: 
+[0m14:14:41.181442 [info ] [MainThread]: Concurrency: 4 threads (target='smoke')
+[0m14:14:41.181588 [info ] [MainThread]: 
+[0m14:14:41.181828 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:14:41.184058 [debug] [ThreadPool]: Acquiring new postgres connection 'list_xero_smoke'
+[0m14:14:41.189398 [debug] [ThreadPool]: Acquiring new postgres connection 'list_xero_smoke'
+[0m14:14:41.189671 [debug] [ThreadPool]: Acquiring new postgres connection 'list_xero_smoke'
+[0m14:14:41.234632 [debug] [ThreadPool]: Using postgres connection "list_xero_smoke"
+[0m14:14:41.234883 [debug] [ThreadPool]: Using postgres connection "list_xero_smoke"
+[0m14:14:41.235056 [debug] [ThreadPool]: Using postgres connection "list_xero_smoke"
+[0m14:14:41.235210 [debug] [ThreadPool]: On list_xero_smoke: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "list_xero_smoke"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:14:41.235366 [debug] [ThreadPool]: On list_xero_smoke: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "list_xero_smoke"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:14:41.235517 [debug] [ThreadPool]: On list_xero_smoke: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "list_xero_smoke"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:14:41.235669 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:14:41.235814 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:14:41.235969 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:14:41.276237 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.041 seconds
+[0m14:14:41.276514 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.041 seconds
+[0m14:14:41.277236 [debug] [ThreadPool]: On list_xero_smoke: Close
+[0m14:14:41.277393 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.041 seconds
+[0m14:14:41.277972 [debug] [ThreadPool]: On list_xero_smoke: Close
+[0m14:14:41.278644 [debug] [ThreadPool]: On list_xero_smoke: Close
+[0m14:14:41.279249 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_xero_smoke, now create_xero_smoke_public_bronze)
+[0m14:14:41.279463 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_xero_smoke, now create_xero_smoke_public_silver)
+[0m14:14:41.279645 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_xero_smoke, now create_xero_smoke_public_gold)
+[0m14:14:41.279953 [debug] [ThreadPool]: Creating schema "database: "xero_smoke"
+schema: "public_bronze"
+"
+[0m14:14:41.280178 [debug] [ThreadPool]: Creating schema "database: "xero_smoke"
+schema: "public_silver"
+"
+[0m14:14:41.280420 [debug] [ThreadPool]: Creating schema "database: "xero_smoke"
+schema: "public_gold"
+"
+[0m14:14:41.283219 [debug] [ThreadPool]: Using postgres connection "create_xero_smoke_public_bronze"
+[0m14:14:41.284169 [debug] [ThreadPool]: Using postgres connection "create_xero_smoke_public_silver"
+[0m14:14:41.285322 [debug] [ThreadPool]: Using postgres connection "create_xero_smoke_public_gold"
+[0m14:14:41.285492 [debug] [ThreadPool]: On create_xero_smoke_public_bronze: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "create_xero_smoke_public_bronze"} */
+create schema if not exists "public_bronze"
+[0m14:14:41.285662 [debug] [ThreadPool]: On create_xero_smoke_public_silver: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "create_xero_smoke_public_silver"} */
+create schema if not exists "public_silver"
+[0m14:14:41.285818 [debug] [ThreadPool]: On create_xero_smoke_public_gold: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "create_xero_smoke_public_gold"} */
+create schema if not exists "public_gold"
+[0m14:14:41.285963 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:14:41.286101 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:14:41.286247 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:14:41.294402 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.008 seconds
+[0m14:14:41.294731 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.009 seconds
+[0m14:14:41.294884 [debug] [ThreadPool]: SQL status: CREATE SCHEMA in 0.009 seconds
+[0m14:14:41.295383 [debug] [ThreadPool]: On create_xero_smoke_public_bronze: COMMIT
+[0m14:14:41.295784 [debug] [ThreadPool]: On create_xero_smoke_public_silver: COMMIT
+[0m14:14:41.296141 [debug] [ThreadPool]: On create_xero_smoke_public_gold: COMMIT
+[0m14:14:41.296302 [debug] [ThreadPool]: Using postgres connection "create_xero_smoke_public_bronze"
+[0m14:14:41.296434 [debug] [ThreadPool]: Using postgres connection "create_xero_smoke_public_silver"
+[0m14:14:41.296557 [debug] [ThreadPool]: Using postgres connection "create_xero_smoke_public_gold"
+[0m14:14:41.296682 [debug] [ThreadPool]: On create_xero_smoke_public_bronze: COMMIT
+[0m14:14:41.296802 [debug] [ThreadPool]: On create_xero_smoke_public_silver: COMMIT
+[0m14:14:41.296920 [debug] [ThreadPool]: On create_xero_smoke_public_gold: COMMIT
+[0m14:14:41.298246 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m14:14:41.298397 [debug] [ThreadPool]: On create_xero_smoke_public_bronze: Close
+[0m14:14:41.298535 [debug] [ThreadPool]: SQL status: COMMIT in 0.001 seconds
+[0m14:14:41.298696 [debug] [ThreadPool]: SQL status: COMMIT in 0.002 seconds
+[0m14:14:41.298964 [debug] [ThreadPool]: On create_xero_smoke_public_gold: Close
+[0m14:14:41.299144 [debug] [ThreadPool]: On create_xero_smoke_public_silver: Close
+[0m14:14:41.300513 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_xero_smoke_public_bronze, now list_xero_smoke_public_bronze)
+[0m14:14:41.300735 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_xero_smoke_public_gold, now list_xero_smoke_public_gold)
+[0m14:14:41.303757 [debug] [ThreadPool]: Using postgres connection "list_xero_smoke_public_bronze"
+[0m14:14:41.304000 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_xero_smoke_public_silver, now list_xero_smoke_public_silver)
+[0m14:14:41.305065 [debug] [ThreadPool]: Using postgres connection "list_xero_smoke_public_gold"
+[0m14:14:41.305236 [debug] [ThreadPool]: On list_xero_smoke_public_bronze: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "list_xero_smoke_public_bronze"} */
+select
+      'xero_smoke' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_bronze'
+    union all
+    select
+      'xero_smoke' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_bronze'
+    union all
+    select
+      'xero_smoke' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_bronze'
+  
+[0m14:14:41.306050 [debug] [ThreadPool]: Using postgres connection "list_xero_smoke_public_silver"
+[0m14:14:41.306208 [debug] [ThreadPool]: On list_xero_smoke_public_gold: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "list_xero_smoke_public_gold"} */
+select
+      'xero_smoke' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'xero_smoke' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'xero_smoke' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_gold'
+  
+[0m14:14:41.306355 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:14:41.306497 [debug] [ThreadPool]: On list_xero_smoke_public_silver: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "list_xero_smoke_public_silver"} */
+select
+      'xero_smoke' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'xero_smoke' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'xero_smoke' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_silver'
+  
+[0m14:14:41.306646 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:14:41.306884 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:14:41.317140 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.010 seconds
+[0m14:14:41.317354 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.011 seconds
+[0m14:14:41.317510 [debug] [ThreadPool]: SQL status: SELECT 0 in 0.011 seconds
+[0m14:14:41.318112 [debug] [ThreadPool]: On list_xero_smoke_public_gold: ROLLBACK
+[0m14:14:41.318666 [debug] [ThreadPool]: On list_xero_smoke_public_bronze: ROLLBACK
+[0m14:14:41.319245 [debug] [ThreadPool]: On list_xero_smoke_public_silver: ROLLBACK
+[0m14:14:41.319760 [debug] [ThreadPool]: On list_xero_smoke_public_silver: Close
+[0m14:14:41.319936 [debug] [ThreadPool]: On list_xero_smoke_public_bronze: Close
+[0m14:14:41.320104 [debug] [ThreadPool]: On list_xero_smoke_public_gold: Close
+[0m14:14:41.323178 [debug] [MainThread]: Using postgres connection "master"
+[0m14:14:41.323414 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m14:14:41.323762 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:14:41.333471 [debug] [MainThread]: SQL status: SELECT 0 in 0.010 seconds
+[0m14:14:41.334074 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b20c290>]}
+[0m14:14:41.334312 [debug] [MainThread]: On master: ROLLBACK
+[0m14:14:41.334655 [debug] [MainThread]: On master: COMMIT
+[0m14:14:41.334790 [debug] [MainThread]: Using postgres connection "master"
+[0m14:14:41.334906 [debug] [MainThread]: On master: COMMIT
+[0m14:14:41.335434 [debug] [MainThread]: SQL status: COMMIT in 0.000 seconds
+[0m14:14:41.335612 [debug] [MainThread]: On master: Close
+[0m14:14:41.337722 [debug] [Thread-1 (]: Began running node model.xero_dbt.bronze_stripe_balance_transactions
+[0m14:14:41.337929 [debug] [Thread-3 (]: Began running node model.xero_dbt.bronze_xero_accounts
+[0m14:14:41.338116 [debug] [Thread-4 (]: Began running node model.xero_dbt.bronze_xero_bank_transactions
+[0m14:14:41.338280 [debug] [Thread-2 (]: Began running node model.xero_dbt.bronze_stripe_payouts
+[0m14:14:41.338538 [info ] [Thread-1 (]: 1 of 40 START sql table model public_bronze.bronze_stripe_balance_transactions . [RUN]
+[0m14:14:41.338784 [info ] [Thread-3 (]: 3 of 40 START sql table model public_bronze.bronze_xero_accounts ............... [RUN]
+[0m14:14:41.339007 [info ] [Thread-4 (]: 4 of 40 START sql table model public_bronze.bronze_xero_bank_transactions ...... [RUN]
+[0m14:14:41.339225 [info ] [Thread-2 (]: 2 of 40 START sql table model public_bronze.bronze_stripe_payouts .............. [RUN]
+[0m14:14:41.339533 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_xero_smoke_public_bronze, now model.xero_dbt.bronze_stripe_balance_transactions)
+[0m14:14:41.339724 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly list_xero_smoke_public_silver, now model.xero_dbt.bronze_xero_accounts)
+[0m14:14:41.339999 [debug] [Thread-4 (]: Acquiring new postgres connection 'model.xero_dbt.bronze_xero_bank_transactions'
+[0m14:14:41.340169 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly list_xero_smoke_public_gold, now model.xero_dbt.bronze_stripe_payouts)
+[0m14:14:41.340349 [debug] [Thread-1 (]: Began compiling node model.xero_dbt.bronze_stripe_balance_transactions
+[0m14:14:41.340525 [debug] [Thread-3 (]: Began compiling node model.xero_dbt.bronze_xero_accounts
+[0m14:14:41.340690 [debug] [Thread-4 (]: Began compiling node model.xero_dbt.bronze_xero_bank_transactions
+[0m14:14:41.340846 [debug] [Thread-2 (]: Began compiling node model.xero_dbt.bronze_stripe_payouts
+[0m14:14:41.345087 [debug] [Thread-1 (]: Writing injected SQL for node "model.xero_dbt.bronze_stripe_balance_transactions"
+[0m14:14:41.346373 [debug] [Thread-3 (]: Writing injected SQL for node "model.xero_dbt.bronze_xero_accounts"
+[0m14:14:41.347840 [debug] [Thread-4 (]: Writing injected SQL for node "model.xero_dbt.bronze_xero_bank_transactions"
+[0m14:14:41.348999 [debug] [Thread-2 (]: Writing injected SQL for node "model.xero_dbt.bronze_stripe_payouts"
+[0m14:14:41.349646 [debug] [Thread-3 (]: Began executing node model.xero_dbt.bronze_xero_accounts
+[0m14:14:41.349843 [debug] [Thread-1 (]: Began executing node model.xero_dbt.bronze_stripe_balance_transactions
+[0m14:14:41.350014 [debug] [Thread-2 (]: Began executing node model.xero_dbt.bronze_stripe_payouts
+[0m14:14:41.355628 [debug] [Thread-4 (]: Began executing node model.xero_dbt.bronze_xero_bank_transactions
+[0m14:14:41.370966 [debug] [Thread-3 (]: Writing runtime sql for node "model.xero_dbt.bronze_xero_accounts"
+[0m14:14:41.372184 [debug] [Thread-1 (]: Writing runtime sql for node "model.xero_dbt.bronze_stripe_balance_transactions"
+[0m14:14:41.382854 [debug] [Thread-2 (]: Writing runtime sql for node "model.xero_dbt.bronze_stripe_payouts"
+[0m14:14:41.384542 [debug] [Thread-4 (]: Writing runtime sql for node "model.xero_dbt.bronze_xero_bank_transactions"
+[0m14:14:41.388447 [debug] [Thread-2 (]: Using postgres connection "model.xero_dbt.bronze_stripe_payouts"
+[0m14:14:41.388783 [debug] [Thread-2 (]: On model.xero_dbt.bronze_stripe_payouts: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_stripe_payouts"} */
+
+  
+    
+
+  create  table "xero_smoke"."public_bronze"."bronze_stripe_payouts__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    id,
+    amount       / 100.0 AS amount,
+    arrival_date,
+    created,
+    currency,
+    description,
+    destination,
+    failure_code,
+    failure_message,
+    method,
+    source_type,
+    status,
+    type,
+    loaded_at
+FROM "xero_smoke"."public"."stripe_payouts_raw"
+WHERE id IS NOT NULL
+  );
+  
+[0m14:14:41.389016 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.bronze_xero_bank_transactions"
+[0m14:14:41.389211 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.bronze_xero_accounts"
+[0m14:14:41.389398 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.bronze_stripe_balance_transactions"
+[0m14:14:41.389564 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:14:41.389748 [debug] [Thread-4 (]: On model.xero_dbt.bronze_xero_bank_transactions: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_xero_bank_transactions"} */
+
+  
+    
+
+  create  table "xero_smoke"."public_bronze"."bronze_xero_bank_transactions__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    transaction_id,
+    type,
+    status,
+    transaction_date,
+    amount,
+    bank_account_id,
+    bank_account_name,
+    reference,
+    is_reconciled,
+    currency_code,
+    contact_id,
+    contact_name,
+    line_items,
+    updated_at,
+    loaded_at
+FROM "xero_smoke"."public"."xero_bank_transactions_raw"
+WHERE transaction_id IS NOT NULL
+  AND status != 'DELETED'
+  );
+  
+[0m14:14:41.389932 [debug] [Thread-3 (]: On model.xero_dbt.bronze_xero_accounts: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_xero_accounts"} */
+
+  
+    
+
+  create  table "xero_smoke"."public_bronze"."bronze_xero_accounts__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    account_id,
+    code,
+    name,
+    type,
+    class,
+    status,
+    description,
+    tax_type,
+    updated_at,
+    loaded_at
+FROM "xero_smoke"."public"."xero_accounts_raw"
+WHERE account_id IS NOT NULL
+  );
+  
+[0m14:14:41.390120 [debug] [Thread-1 (]: On model.xero_dbt.bronze_stripe_balance_transactions: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_stripe_balance_transactions"} */
+
+  
+    
+
+  create  table "xero_smoke"."public_bronze"."bronze_stripe_balance_transactions__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    id,
+    -- Stripe stores amounts in cents; convert to dollars
+    amount       / 100.0 AS amount,
+    fee          / 100.0 AS fee,
+    net          / 100.0 AS net,
+    available_on,
+    created,
+    currency,
+    description,
+    exchange_rate,
+    reporting_category,
+    source,
+    status,
+    type,
+    fee_details,
+    loaded_at
+FROM "xero_smoke"."public"."stripe_balance_transactions_raw"
+WHERE id IS NOT NULL
+  );
+  
+[0m14:14:41.390481 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m14:14:41.390684 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:14:41.390885 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:14:41.404687 [debug] [Thread-2 (]: SQL status: SELECT 3 in 0.015 seconds
+[0m14:14:41.404946 [debug] [Thread-4 (]: SQL status: SELECT 21 in 0.014 seconds
+[0m14:14:41.405153 [debug] [Thread-3 (]: SQL status: SELECT 10 in 0.014 seconds
+[0m14:14:41.410677 [debug] [Thread-2 (]: Using postgres connection "model.xero_dbt.bronze_stripe_payouts"
+[0m14:14:41.410863 [debug] [Thread-1 (]: SQL status: SELECT 11 in 0.020 seconds
+[0m14:14:41.412361 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.bronze_xero_bank_transactions"
+[0m14:14:41.413806 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.bronze_xero_accounts"
+[0m14:14:41.413986 [debug] [Thread-2 (]: On model.xero_dbt.bronze_stripe_payouts: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_stripe_payouts"} */
+alter table "xero_smoke"."public_bronze"."bronze_stripe_payouts__dbt_tmp" rename to "bronze_stripe_payouts"
+[0m14:14:41.415426 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.bronze_stripe_balance_transactions"
+[0m14:14:41.415604 [debug] [Thread-4 (]: On model.xero_dbt.bronze_xero_bank_transactions: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_xero_bank_transactions"} */
+alter table "xero_smoke"."public_bronze"."bronze_xero_bank_transactions__dbt_tmp" rename to "bronze_xero_bank_transactions"
+[0m14:14:41.415788 [debug] [Thread-3 (]: On model.xero_dbt.bronze_xero_accounts: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_xero_accounts"} */
+alter table "xero_smoke"."public_bronze"."bronze_xero_accounts__dbt_tmp" rename to "bronze_xero_accounts"
+[0m14:14:41.416007 [debug] [Thread-1 (]: On model.xero_dbt.bronze_stripe_balance_transactions: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_stripe_balance_transactions"} */
+alter table "xero_smoke"."public_bronze"."bronze_stripe_balance_transactions__dbt_tmp" rename to "bronze_stripe_balance_transactions"
+[0m14:14:41.416371 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:14:41.422825 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.007 seconds
+[0m14:14:41.423015 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.007 seconds
+[0m14:14:41.425032 [debug] [Thread-4 (]: On model.xero_dbt.bronze_xero_bank_transactions: COMMIT
+[0m14:14:41.425799 [debug] [Thread-2 (]: On model.xero_dbt.bronze_stripe_payouts: COMMIT
+[0m14:14:41.425968 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.010 seconds
+[0m14:14:41.426589 [debug] [Thread-3 (]: On model.xero_dbt.bronze_xero_accounts: COMMIT
+[0m14:14:41.426762 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.bronze_xero_bank_transactions"
+[0m14:14:41.426916 [debug] [Thread-2 (]: Using postgres connection "model.xero_dbt.bronze_stripe_payouts"
+[0m14:14:41.427511 [debug] [Thread-1 (]: On model.xero_dbt.bronze_stripe_balance_transactions: COMMIT
+[0m14:14:41.427671 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.bronze_xero_accounts"
+[0m14:14:41.427823 [debug] [Thread-4 (]: On model.xero_dbt.bronze_xero_bank_transactions: COMMIT
+[0m14:14:41.427966 [debug] [Thread-2 (]: On model.xero_dbt.bronze_stripe_payouts: COMMIT
+[0m14:14:41.428113 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.bronze_stripe_balance_transactions"
+[0m14:14:41.428256 [debug] [Thread-3 (]: On model.xero_dbt.bronze_xero_accounts: COMMIT
+[0m14:14:41.428446 [debug] [Thread-1 (]: On model.xero_dbt.bronze_stripe_balance_transactions: COMMIT
+[0m14:14:41.430007 [debug] [Thread-4 (]: SQL status: COMMIT in 0.002 seconds
+[0m14:14:41.430171 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m14:14:41.435173 [debug] [Thread-4 (]: Applying DROP to: "xero_smoke"."public_bronze"."bronze_xero_bank_transactions__dbt_backup"
+[0m14:14:41.435351 [debug] [Thread-2 (]: SQL status: COMMIT in 0.007 seconds
+[0m14:14:41.436311 [debug] [Thread-1 (]: Applying DROP to: "xero_smoke"."public_bronze"."bronze_stripe_balance_transactions__dbt_backup"
+[0m14:14:41.436474 [debug] [Thread-3 (]: SQL status: COMMIT in 0.008 seconds
+[0m14:14:41.438741 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.bronze_xero_bank_transactions"
+[0m14:14:41.439863 [debug] [Thread-2 (]: Applying DROP to: "xero_smoke"."public_bronze"."bronze_stripe_payouts__dbt_backup"
+[0m14:14:41.440276 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.bronze_stripe_balance_transactions"
+[0m14:14:41.441340 [debug] [Thread-3 (]: Applying DROP to: "xero_smoke"."public_bronze"."bronze_xero_accounts__dbt_backup"
+[0m14:14:41.441550 [debug] [Thread-4 (]: On model.xero_dbt.bronze_xero_bank_transactions: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_xero_bank_transactions"} */
+drop table if exists "xero_smoke"."public_bronze"."bronze_xero_bank_transactions__dbt_backup" cascade
+[0m14:14:41.441885 [debug] [Thread-2 (]: Using postgres connection "model.xero_dbt.bronze_stripe_payouts"
+[0m14:14:41.442052 [debug] [Thread-1 (]: On model.xero_dbt.bronze_stripe_balance_transactions: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_stripe_balance_transactions"} */
+drop table if exists "xero_smoke"."public_bronze"."bronze_stripe_balance_transactions__dbt_backup" cascade
+[0m14:14:41.442371 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.bronze_xero_accounts"
+[0m14:14:41.442583 [debug] [Thread-2 (]: On model.xero_dbt.bronze_stripe_payouts: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_stripe_payouts"} */
+drop table if exists "xero_smoke"."public_bronze"."bronze_stripe_payouts__dbt_backup" cascade
+[0m14:14:41.442793 [debug] [Thread-3 (]: On model.xero_dbt.bronze_xero_accounts: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_xero_accounts"} */
+drop table if exists "xero_smoke"."public_bronze"."bronze_xero_accounts__dbt_backup" cascade
+[0m14:14:41.443300 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m14:14:41.443469 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m14:14:41.444590 [debug] [Thread-4 (]: On model.xero_dbt.bronze_xero_bank_transactions: Close
+[0m14:14:41.444763 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m14:14:41.444914 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m14:14:41.445458 [debug] [Thread-1 (]: On model.xero_dbt.bronze_stripe_balance_transactions: Close
+[0m14:14:41.446041 [debug] [Thread-3 (]: On model.xero_dbt.bronze_xero_accounts: Close
+[0m14:14:41.447098 [debug] [Thread-2 (]: On model.xero_dbt.bronze_stripe_payouts: Close
+[0m14:14:41.448407 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10adc3e30>]}
+[0m14:14:41.448577 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b29e850>]}
+[0m14:14:41.448875 [info ] [Thread-4 (]: 4 of 40 OK created sql table model public_bronze.bronze_xero_bank_transactions . [[32mSELECT 21[0m in 0.11s]
+[0m14:14:41.449050 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b1d6450>]}
+[0m14:14:41.449293 [info ] [Thread-3 (]: 3 of 40 OK created sql table model public_bronze.bronze_xero_accounts .......... [[32mSELECT 10[0m in 0.11s]
+[0m14:14:41.449454 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108addc50>]}
+[0m14:14:41.449683 [debug] [Thread-4 (]: Finished running node model.xero_dbt.bronze_xero_bank_transactions
+[0m14:14:41.449924 [info ] [Thread-1 (]: 1 of 40 OK created sql table model public_bronze.bronze_stripe_balance_transactions  [[32mSELECT 11[0m in 0.11s]
+[0m14:14:41.450171 [debug] [Thread-3 (]: Finished running node model.xero_dbt.bronze_xero_accounts
+[0m14:14:41.450431 [info ] [Thread-2 (]: 2 of 40 OK created sql table model public_bronze.bronze_stripe_payouts ......... [[32mSELECT 3[0m in 0.11s]
+[0m14:14:41.450631 [debug] [Thread-4 (]: Began running node model.xero_dbt.bronze_xero_invoices
+[0m14:14:41.450915 [debug] [Thread-1 (]: Finished running node model.xero_dbt.bronze_stripe_balance_transactions
+[0m14:14:41.451174 [debug] [Thread-3 (]: Began running node test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_date.489c7da22d
+[0m14:14:41.451437 [debug] [Thread-2 (]: Finished running node model.xero_dbt.bronze_stripe_payouts
+[0m14:14:41.451713 [info ] [Thread-4 (]: 5 of 40 START sql table model public_bronze.bronze_xero_invoices ............... [RUN]
+[0m14:14:41.451913 [debug] [Thread-1 (]: Began running node test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_id.631534e7ee
+[0m14:14:41.452301 [debug] [Thread-2 (]: Began running node test.xero_dbt.unique_bronze_xero_bank_transactions_transaction_id.8ecfe9b10e
+[0m14:14:41.452103 [info ] [Thread-3 (]: 6 of 40 START test not_null_bronze_xero_bank_transactions_transaction_date ..... [RUN]
+[0m14:14:41.452591 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.xero_dbt.bronze_xero_bank_transactions, now model.xero_dbt.bronze_xero_invoices)
+[0m14:14:41.452807 [info ] [Thread-1 (]: 7 of 40 START test not_null_bronze_xero_bank_transactions_transaction_id ....... [RUN]
+[0m14:14:41.452987 [info ] [Thread-2 (]: 8 of 40 START test unique_bronze_xero_bank_transactions_transaction_id ......... [RUN]
+[0m14:14:41.453175 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.xero_dbt.bronze_xero_accounts, now test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_date.489c7da22d)
+[0m14:14:41.453337 [debug] [Thread-4 (]: Began compiling node model.xero_dbt.bronze_xero_invoices
+[0m14:14:41.453497 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.xero_dbt.bronze_stripe_balance_transactions, now test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_id.631534e7ee)
+[0m14:14:41.453665 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.xero_dbt.bronze_stripe_payouts, now test.xero_dbt.unique_bronze_xero_bank_transactions_transaction_id.8ecfe9b10e)
+[0m14:14:41.453823 [debug] [Thread-3 (]: Began compiling node test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_date.489c7da22d
+[0m14:14:41.455161 [debug] [Thread-4 (]: Writing injected SQL for node "model.xero_dbt.bronze_xero_invoices"
+[0m14:14:41.455344 [debug] [Thread-1 (]: Began compiling node test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_id.631534e7ee
+[0m14:14:41.455504 [debug] [Thread-2 (]: Began compiling node test.xero_dbt.unique_bronze_xero_bank_transactions_transaction_id.8ecfe9b10e
+[0m14:14:41.459728 [debug] [Thread-3 (]: Writing injected SQL for node "test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_date.489c7da22d"
+[0m14:14:41.461562 [debug] [Thread-1 (]: Writing injected SQL for node "test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_id.631534e7ee"
+[0m14:14:41.464357 [debug] [Thread-2 (]: Writing injected SQL for node "test.xero_dbt.unique_bronze_xero_bank_transactions_transaction_id.8ecfe9b10e"
+[0m14:14:41.464805 [debug] [Thread-4 (]: Began executing node model.xero_dbt.bronze_xero_invoices
+[0m14:14:41.466293 [debug] [Thread-4 (]: Writing runtime sql for node "model.xero_dbt.bronze_xero_invoices"
+[0m14:14:41.466566 [debug] [Thread-2 (]: Began executing node test.xero_dbt.unique_bronze_xero_bank_transactions_transaction_id.8ecfe9b10e
+[0m14:14:41.472752 [debug] [Thread-1 (]: Began executing node test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_id.631534e7ee
+[0m14:14:41.475171 [debug] [Thread-2 (]: Writing runtime sql for node "test.xero_dbt.unique_bronze_xero_bank_transactions_transaction_id.8ecfe9b10e"
+[0m14:14:41.475367 [debug] [Thread-3 (]: Began executing node test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_date.489c7da22d
+[0m14:14:41.476372 [debug] [Thread-1 (]: Writing runtime sql for node "test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_id.631534e7ee"
+[0m14:14:41.477394 [debug] [Thread-3 (]: Writing runtime sql for node "test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_date.489c7da22d"
+[0m14:14:41.477578 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.bronze_xero_invoices"
+[0m14:14:41.477865 [debug] [Thread-4 (]: On model.xero_dbt.bronze_xero_invoices: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_xero_invoices"} */
+
+  
+    
+
+  create  table "xero_smoke"."public_bronze"."bronze_xero_invoices__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    invoice_id,
+    type,
+    status,
+    invoice_date,
+    due_date,
+    invoice_number,
+    reference,
+    contact_id,
+    contact_name,
+    sub_total,
+    total_tax,
+    total,
+    amount_due,
+    amount_paid,
+    currency_code,
+    currency_rate,
+    line_items,
+    updated_at,
+    loaded_at
+FROM "xero_smoke"."public"."xero_invoices_raw"
+WHERE invoice_id IS NOT NULL
+  AND status NOT IN ('DELETED', 'VOIDED')
+  );
+  
+[0m14:14:41.478064 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:14:41.478321 [debug] [Thread-2 (]: Using postgres connection "test.xero_dbt.unique_bronze_xero_bank_transactions_transaction_id.8ecfe9b10e"
+[0m14:14:41.478590 [debug] [Thread-2 (]: On test.xero_dbt.unique_bronze_xero_bank_transactions_transaction_id.8ecfe9b10e: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.unique_bronze_xero_bank_transactions_transaction_id.8ecfe9b10e"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    transaction_id as unique_field,
+    count(*) as n_records
+
+from "xero_smoke"."public_bronze"."bronze_xero_bank_transactions"
+where transaction_id is not null
+group by transaction_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.478798 [debug] [Thread-1 (]: Using postgres connection "test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_id.631534e7ee"
+[0m14:14:41.478985 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:14:41.479183 [debug] [Thread-3 (]: Using postgres connection "test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_date.489c7da22d"
+[0m14:14:41.479365 [debug] [Thread-1 (]: On test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_id.631534e7ee: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_id.631534e7ee"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_id
+from "xero_smoke"."public_bronze"."bronze_xero_bank_transactions"
+where transaction_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.479622 [debug] [Thread-3 (]: On test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_date.489c7da22d: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_date.489c7da22d"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_date
+from "xero_smoke"."public_bronze"."bronze_xero_bank_transactions"
+where transaction_date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.479806 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:14:41.479984 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:14:41.492148 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m14:14:41.492324 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.012 seconds
+[0m14:14:41.492488 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.013 seconds
+[0m14:14:41.494290 [debug] [Thread-2 (]: On test.xero_dbt.unique_bronze_xero_bank_transactions_transaction_id.8ecfe9b10e: ROLLBACK
+[0m14:14:41.495028 [debug] [Thread-3 (]: On test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_date.489c7da22d: ROLLBACK
+[0m14:14:41.495662 [debug] [Thread-1 (]: On test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_id.631534e7ee: ROLLBACK
+[0m14:14:41.495835 [debug] [Thread-4 (]: SQL status: SELECT 13 in 0.018 seconds
+[0m14:14:41.497242 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.bronze_xero_invoices"
+[0m14:14:41.497409 [debug] [Thread-2 (]: On test.xero_dbt.unique_bronze_xero_bank_transactions_transaction_id.8ecfe9b10e: Close
+[0m14:14:41.497569 [debug] [Thread-4 (]: On model.xero_dbt.bronze_xero_invoices: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_xero_invoices"} */
+alter table "xero_smoke"."public_bronze"."bronze_xero_invoices__dbt_tmp" rename to "bronze_xero_invoices"
+[0m14:14:41.497728 [debug] [Thread-1 (]: On test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_id.631534e7ee: Close
+[0m14:14:41.497974 [debug] [Thread-3 (]: On test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_date.489c7da22d: Close
+[0m14:14:41.498256 [info ] [Thread-2 (]: 8 of 40 PASS unique_bronze_xero_bank_transactions_transaction_id ............... [[32mPASS[0m in 0.04s]
+[0m14:14:41.498594 [info ] [Thread-1 (]: 7 of 40 PASS not_null_bronze_xero_bank_transactions_transaction_id ............. [[32mPASS[0m in 0.05s]
+[0m14:14:41.498837 [info ] [Thread-3 (]: 6 of 40 PASS not_null_bronze_xero_bank_transactions_transaction_date ........... [[32mPASS[0m in 0.05s]
+[0m14:14:41.499023 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:14:41.499241 [debug] [Thread-2 (]: Finished running node test.xero_dbt.unique_bronze_xero_bank_transactions_transaction_id.8ecfe9b10e
+[0m14:14:41.499450 [debug] [Thread-1 (]: Finished running node test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_id.631534e7ee
+[0m14:14:41.499649 [debug] [Thread-3 (]: Finished running node test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_date.489c7da22d
+[0m14:14:41.500271 [debug] [Thread-4 (]: On model.xero_dbt.bronze_xero_invoices: COMMIT
+[0m14:14:41.500448 [debug] [Thread-2 (]: Began running node test.xero_dbt.not_null_bronze_xero_accounts_account_id.f0e16a998a
+[0m14:14:41.500644 [debug] [Thread-1 (]: Began running node test.xero_dbt.not_null_bronze_xero_accounts_class.7e60cdd5c9
+[0m14:14:41.500838 [debug] [Thread-3 (]: Began running node test.xero_dbt.unique_bronze_xero_accounts_account_id.32903a324e
+[0m14:14:41.501011 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.bronze_xero_invoices"
+[0m14:14:41.501174 [info ] [Thread-2 (]: 9 of 40 START test not_null_bronze_xero_accounts_account_id .................... [RUN]
+[0m14:14:41.501349 [info ] [Thread-1 (]: 10 of 40 START test not_null_bronze_xero_accounts_class ........................ [RUN]
+[0m14:14:41.501525 [info ] [Thread-3 (]: 11 of 40 START test unique_bronze_xero_accounts_account_id ..................... [RUN]
+[0m14:14:41.501698 [debug] [Thread-4 (]: On model.xero_dbt.bronze_xero_invoices: COMMIT
+[0m14:14:41.501873 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.xero_dbt.unique_bronze_xero_bank_transactions_transaction_id.8ecfe9b10e, now test.xero_dbt.not_null_bronze_xero_accounts_account_id.f0e16a998a)
+[0m14:14:41.502090 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_id.631534e7ee, now test.xero_dbt.not_null_bronze_xero_accounts_class.7e60cdd5c9)
+[0m14:14:41.502277 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.xero_dbt.not_null_bronze_xero_bank_transactions_transaction_date.489c7da22d, now test.xero_dbt.unique_bronze_xero_accounts_account_id.32903a324e)
+[0m14:14:41.502460 [debug] [Thread-2 (]: Began compiling node test.xero_dbt.not_null_bronze_xero_accounts_account_id.f0e16a998a
+[0m14:14:41.502637 [debug] [Thread-1 (]: Began compiling node test.xero_dbt.not_null_bronze_xero_accounts_class.7e60cdd5c9
+[0m14:14:41.502864 [debug] [Thread-3 (]: Began compiling node test.xero_dbt.unique_bronze_xero_accounts_account_id.32903a324e
+[0m14:14:41.504839 [debug] [Thread-2 (]: Writing injected SQL for node "test.xero_dbt.not_null_bronze_xero_accounts_account_id.f0e16a998a"
+[0m14:14:41.506790 [debug] [Thread-1 (]: Writing injected SQL for node "test.xero_dbt.not_null_bronze_xero_accounts_class.7e60cdd5c9"
+[0m14:14:41.506997 [debug] [Thread-4 (]: SQL status: COMMIT in 0.005 seconds
+[0m14:14:41.508639 [debug] [Thread-3 (]: Writing injected SQL for node "test.xero_dbt.unique_bronze_xero_accounts_account_id.32903a324e"
+[0m14:14:41.509705 [debug] [Thread-4 (]: Applying DROP to: "xero_smoke"."public_bronze"."bronze_xero_invoices__dbt_backup"
+[0m14:14:41.510496 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.bronze_xero_invoices"
+[0m14:14:41.510700 [debug] [Thread-4 (]: On model.xero_dbt.bronze_xero_invoices: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.bronze_xero_invoices"} */
+drop table if exists "xero_smoke"."public_bronze"."bronze_xero_invoices__dbt_backup" cascade
+[0m14:14:41.510872 [debug] [Thread-1 (]: Began executing node test.xero_dbt.not_null_bronze_xero_accounts_class.7e60cdd5c9
+[0m14:14:41.511041 [debug] [Thread-3 (]: Began executing node test.xero_dbt.unique_bronze_xero_accounts_account_id.32903a324e
+[0m14:14:41.511225 [debug] [Thread-2 (]: Began executing node test.xero_dbt.not_null_bronze_xero_accounts_account_id.f0e16a998a
+[0m14:14:41.512166 [debug] [Thread-1 (]: Writing runtime sql for node "test.xero_dbt.not_null_bronze_xero_accounts_class.7e60cdd5c9"
+[0m14:14:41.512330 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.001 seconds
+[0m14:14:41.513256 [debug] [Thread-3 (]: Writing runtime sql for node "test.xero_dbt.unique_bronze_xero_accounts_account_id.32903a324e"
+[0m14:14:41.514293 [debug] [Thread-2 (]: Writing runtime sql for node "test.xero_dbt.not_null_bronze_xero_accounts_account_id.f0e16a998a"
+[0m14:14:41.514928 [debug] [Thread-4 (]: On model.xero_dbt.bronze_xero_invoices: Close
+[0m14:14:41.515216 [debug] [Thread-1 (]: Using postgres connection "test.xero_dbt.not_null_bronze_xero_accounts_class.7e60cdd5c9"
+[0m14:14:41.515456 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3176b0>]}
+[0m14:14:41.515645 [debug] [Thread-1 (]: On test.xero_dbt.not_null_bronze_xero_accounts_class.7e60cdd5c9: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.not_null_bronze_xero_accounts_class.7e60cdd5c9"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select class
+from "xero_smoke"."public_bronze"."bronze_xero_accounts"
+where class is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.516128 [debug] [Thread-3 (]: Using postgres connection "test.xero_dbt.unique_bronze_xero_accounts_account_id.32903a324e"
+[0m14:14:41.516299 [debug] [Thread-2 (]: Using postgres connection "test.xero_dbt.not_null_bronze_xero_accounts_account_id.f0e16a998a"
+[0m14:14:41.516453 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:14:41.515974 [info ] [Thread-4 (]: 5 of 40 OK created sql table model public_bronze.bronze_xero_invoices .......... [[32mSELECT 13[0m in 0.06s]
+[0m14:14:41.516674 [debug] [Thread-3 (]: On test.xero_dbt.unique_bronze_xero_accounts_account_id.32903a324e: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.unique_bronze_xero_accounts_account_id.32903a324e"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    account_id as unique_field,
+    count(*) as n_records
+
+from "xero_smoke"."public_bronze"."bronze_xero_accounts"
+where account_id is not null
+group by account_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.516853 [debug] [Thread-2 (]: On test.xero_dbt.not_null_bronze_xero_accounts_account_id.f0e16a998a: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.not_null_bronze_xero_accounts_account_id.f0e16a998a"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select account_id
+from "xero_smoke"."public_bronze"."bronze_xero_accounts"
+where account_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.517151 [debug] [Thread-4 (]: Finished running node model.xero_dbt.bronze_xero_invoices
+[0m14:14:41.517311 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:14:41.517472 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:14:41.517659 [debug] [Thread-4 (]: Began running node test.xero_dbt.not_null_bronze_stripe_balance_transactions_id.9bf22348cf
+[0m14:14:41.518024 [info ] [Thread-4 (]: 12 of 40 START test not_null_bronze_stripe_balance_transactions_id ............. [RUN]
+[0m14:14:41.518220 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.xero_dbt.bronze_xero_invoices, now test.xero_dbt.not_null_bronze_stripe_balance_transactions_id.9bf22348cf)
+[0m14:14:41.518384 [debug] [Thread-4 (]: Began compiling node test.xero_dbt.not_null_bronze_stripe_balance_transactions_id.9bf22348cf
+[0m14:14:41.520128 [debug] [Thread-4 (]: Writing injected SQL for node "test.xero_dbt.not_null_bronze_stripe_balance_transactions_id.9bf22348cf"
+[0m14:14:41.520438 [debug] [Thread-4 (]: Began executing node test.xero_dbt.not_null_bronze_stripe_balance_transactions_id.9bf22348cf
+[0m14:14:41.521415 [debug] [Thread-4 (]: Writing runtime sql for node "test.xero_dbt.not_null_bronze_stripe_balance_transactions_id.9bf22348cf"
+[0m14:14:41.521725 [debug] [Thread-4 (]: Using postgres connection "test.xero_dbt.not_null_bronze_stripe_balance_transactions_id.9bf22348cf"
+[0m14:14:41.521896 [debug] [Thread-4 (]: On test.xero_dbt.not_null_bronze_stripe_balance_transactions_id.9bf22348cf: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.not_null_bronze_stripe_balance_transactions_id.9bf22348cf"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from "xero_smoke"."public_bronze"."bronze_stripe_balance_transactions"
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.522060 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:14:41.527324 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m14:14:41.527503 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m14:14:41.528187 [debug] [Thread-1 (]: On test.xero_dbt.not_null_bronze_xero_accounts_class.7e60cdd5c9: ROLLBACK
+[0m14:14:41.528354 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m14:14:41.529243 [debug] [Thread-2 (]: On test.xero_dbt.not_null_bronze_xero_accounts_account_id.f0e16a998a: ROLLBACK
+[0m14:14:41.530188 [debug] [Thread-3 (]: On test.xero_dbt.unique_bronze_xero_accounts_account_id.32903a324e: ROLLBACK
+[0m14:14:41.530367 [debug] [Thread-1 (]: On test.xero_dbt.not_null_bronze_xero_accounts_class.7e60cdd5c9: Close
+[0m14:14:41.530796 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m14:14:41.530953 [debug] [Thread-2 (]: On test.xero_dbt.not_null_bronze_xero_accounts_account_id.f0e16a998a: Close
+[0m14:14:41.531522 [debug] [Thread-4 (]: On test.xero_dbt.not_null_bronze_stripe_balance_transactions_id.9bf22348cf: ROLLBACK
+[0m14:14:41.530658 [info ] [Thread-1 (]: 10 of 40 PASS not_null_bronze_xero_accounts_class .............................. [[32mPASS[0m in 0.03s]
+[0m14:14:41.531714 [debug] [Thread-3 (]: On test.xero_dbt.unique_bronze_xero_accounts_account_id.32903a324e: Close
+[0m14:14:41.531954 [info ] [Thread-2 (]: 9 of 40 PASS not_null_bronze_xero_accounts_account_id .......................... [[32mPASS[0m in 0.03s]
+[0m14:14:41.532217 [debug] [Thread-1 (]: Finished running node test.xero_dbt.not_null_bronze_xero_accounts_class.7e60cdd5c9
+[0m14:14:41.532463 [debug] [Thread-2 (]: Finished running node test.xero_dbt.not_null_bronze_xero_accounts_account_id.f0e16a998a
+[0m14:14:41.532686 [info ] [Thread-3 (]: 11 of 40 PASS unique_bronze_xero_accounts_account_id ........................... [[32mPASS[0m in 0.03s]
+[0m14:14:41.532867 [debug] [Thread-4 (]: On test.xero_dbt.not_null_bronze_stripe_balance_transactions_id.9bf22348cf: Close
+[0m14:14:41.533033 [debug] [Thread-1 (]: Began running node test.xero_dbt.unique_bronze_stripe_balance_transactions_id.ec30a7a9ad
+[0m14:14:41.533226 [debug] [Thread-2 (]: Began running node test.xero_dbt.not_null_bronze_stripe_payouts_id.34b8ee38b9
+[0m14:14:41.533560 [debug] [Thread-3 (]: Finished running node test.xero_dbt.unique_bronze_xero_accounts_account_id.32903a324e
+[0m14:14:41.533841 [info ] [Thread-4 (]: 12 of 40 PASS not_null_bronze_stripe_balance_transactions_id ................... [[32mPASS[0m in 0.02s]
+[0m14:14:41.534016 [info ] [Thread-1 (]: 13 of 40 START test unique_bronze_stripe_balance_transactions_id ............... [RUN]
+[0m14:14:41.534250 [info ] [Thread-2 (]: 14 of 40 START test not_null_bronze_stripe_payouts_id .......................... [RUN]
+[0m14:14:41.534512 [debug] [Thread-3 (]: Began running node test.xero_dbt.unique_bronze_stripe_payouts_id.67dd438ed5
+[0m14:14:41.534781 [debug] [Thread-4 (]: Finished running node test.xero_dbt.not_null_bronze_stripe_balance_transactions_id.9bf22348cf
+[0m14:14:41.535027 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.xero_dbt.not_null_bronze_xero_accounts_class.7e60cdd5c9, now test.xero_dbt.unique_bronze_stripe_balance_transactions_id.ec30a7a9ad)
+[0m14:14:41.535192 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.xero_dbt.not_null_bronze_xero_accounts_account_id.f0e16a998a, now test.xero_dbt.not_null_bronze_stripe_payouts_id.34b8ee38b9)
+[0m14:14:41.535373 [info ] [Thread-3 (]: 15 of 40 START test unique_bronze_stripe_payouts_id ............................ [RUN]
+[0m14:14:41.535557 [debug] [Thread-4 (]: Began running node test.xero_dbt.accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY.5dd22ac85a
+[0m14:14:41.535756 [debug] [Thread-1 (]: Began compiling node test.xero_dbt.unique_bronze_stripe_balance_transactions_id.ec30a7a9ad
+[0m14:14:41.535915 [debug] [Thread-2 (]: Began compiling node test.xero_dbt.not_null_bronze_stripe_payouts_id.34b8ee38b9
+[0m14:14:41.536087 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.xero_dbt.unique_bronze_xero_accounts_account_id.32903a324e, now test.xero_dbt.unique_bronze_stripe_payouts_id.67dd438ed5)
+[0m14:14:41.536256 [info ] [Thread-4 (]: 16 of 40 START test accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY .. [RUN]
+[0m14:14:41.538004 [debug] [Thread-1 (]: Writing injected SQL for node "test.xero_dbt.unique_bronze_stripe_balance_transactions_id.ec30a7a9ad"
+[0m14:14:41.539667 [debug] [Thread-2 (]: Writing injected SQL for node "test.xero_dbt.not_null_bronze_stripe_payouts_id.34b8ee38b9"
+[0m14:14:41.539842 [debug] [Thread-3 (]: Began compiling node test.xero_dbt.unique_bronze_stripe_payouts_id.67dd438ed5
+[0m14:14:41.540010 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.xero_dbt.not_null_bronze_stripe_balance_transactions_id.9bf22348cf, now test.xero_dbt.accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY.5dd22ac85a)
+[0m14:14:41.542034 [debug] [Thread-3 (]: Writing injected SQL for node "test.xero_dbt.unique_bronze_stripe_payouts_id.67dd438ed5"
+[0m14:14:41.542241 [debug] [Thread-4 (]: Began compiling node test.xero_dbt.accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY.5dd22ac85a
+[0m14:14:41.543934 [debug] [Thread-4 (]: Writing injected SQL for node "test.xero_dbt.accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY.5dd22ac85a"
+[0m14:14:41.544196 [debug] [Thread-2 (]: Began executing node test.xero_dbt.not_null_bronze_stripe_payouts_id.34b8ee38b9
+[0m14:14:41.544368 [debug] [Thread-3 (]: Began executing node test.xero_dbt.unique_bronze_stripe_payouts_id.67dd438ed5
+[0m14:14:41.545419 [debug] [Thread-2 (]: Writing runtime sql for node "test.xero_dbt.not_null_bronze_stripe_payouts_id.34b8ee38b9"
+[0m14:14:41.545598 [debug] [Thread-1 (]: Began executing node test.xero_dbt.unique_bronze_stripe_balance_transactions_id.ec30a7a9ad
+[0m14:14:41.545759 [debug] [Thread-4 (]: Began executing node test.xero_dbt.accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY.5dd22ac85a
+[0m14:14:41.546930 [debug] [Thread-3 (]: Writing runtime sql for node "test.xero_dbt.unique_bronze_stripe_payouts_id.67dd438ed5"
+[0m14:14:41.547949 [debug] [Thread-1 (]: Writing runtime sql for node "test.xero_dbt.unique_bronze_stripe_balance_transactions_id.ec30a7a9ad"
+[0m14:14:41.550818 [debug] [Thread-4 (]: Writing runtime sql for node "test.xero_dbt.accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY.5dd22ac85a"
+[0m14:14:41.551106 [debug] [Thread-2 (]: Using postgres connection "test.xero_dbt.not_null_bronze_stripe_payouts_id.34b8ee38b9"
+[0m14:14:41.551337 [debug] [Thread-2 (]: On test.xero_dbt.not_null_bronze_stripe_payouts_id.34b8ee38b9: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.not_null_bronze_stripe_payouts_id.34b8ee38b9"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select id
+from "xero_smoke"."public_bronze"."bronze_stripe_payouts"
+where id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.551519 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:14:41.551757 [debug] [Thread-3 (]: Using postgres connection "test.xero_dbt.unique_bronze_stripe_payouts_id.67dd438ed5"
+[0m14:14:41.551934 [debug] [Thread-3 (]: On test.xero_dbt.unique_bronze_stripe_payouts_id.67dd438ed5: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.unique_bronze_stripe_payouts_id.67dd438ed5"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "xero_smoke"."public_bronze"."bronze_stripe_payouts"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.552185 [debug] [Thread-4 (]: Using postgres connection "test.xero_dbt.accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY.5dd22ac85a"
+[0m14:14:41.552338 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:14:41.552519 [debug] [Thread-4 (]: On test.xero_dbt.accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY.5dd22ac85a: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY.5dd22ac85a"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        type as value_field,
+        count(*) as n_records
+
+    from "xero_smoke"."public_bronze"."bronze_xero_invoices"
+    group by type
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'ACCREC','ACCPAY'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.552715 [debug] [Thread-1 (]: Using postgres connection "test.xero_dbt.unique_bronze_stripe_balance_transactions_id.ec30a7a9ad"
+[0m14:14:41.552923 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:14:41.553105 [debug] [Thread-1 (]: On test.xero_dbt.unique_bronze_stripe_balance_transactions_id.ec30a7a9ad: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.unique_bronze_stripe_balance_transactions_id.ec30a7a9ad"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from "xero_smoke"."public_bronze"."bronze_stripe_balance_transactions"
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.553330 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:14:41.562347 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m14:14:41.563129 [debug] [Thread-2 (]: On test.xero_dbt.not_null_bronze_stripe_payouts_id.34b8ee38b9: ROLLBACK
+[0m14:14:41.563331 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m14:14:41.563513 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m14:14:41.563676 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m14:14:41.564420 [debug] [Thread-4 (]: On test.xero_dbt.accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY.5dd22ac85a: ROLLBACK
+[0m14:14:41.564608 [debug] [Thread-2 (]: On test.xero_dbt.not_null_bronze_stripe_payouts_id.34b8ee38b9: Close
+[0m14:14:41.565215 [debug] [Thread-1 (]: On test.xero_dbt.unique_bronze_stripe_balance_transactions_id.ec30a7a9ad: ROLLBACK
+[0m14:14:41.566176 [debug] [Thread-3 (]: On test.xero_dbt.unique_bronze_stripe_payouts_id.67dd438ed5: ROLLBACK
+[0m14:14:41.566727 [info ] [Thread-2 (]: 14 of 40 PASS not_null_bronze_stripe_payouts_id ................................ [[32mPASS[0m in 0.03s]
+[0m14:14:41.567028 [debug] [Thread-4 (]: On test.xero_dbt.accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY.5dd22ac85a: Close
+[0m14:14:41.567493 [debug] [Thread-1 (]: On test.xero_dbt.unique_bronze_stripe_balance_transactions_id.ec30a7a9ad: Close
+[0m14:14:41.568041 [debug] [Thread-2 (]: Finished running node test.xero_dbt.not_null_bronze_stripe_payouts_id.34b8ee38b9
+[0m14:14:41.568272 [debug] [Thread-3 (]: On test.xero_dbt.unique_bronze_stripe_payouts_id.67dd438ed5: Close
+[0m14:14:41.568528 [info ] [Thread-4 (]: 16 of 40 PASS accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY ........ [[32mPASS[0m in 0.03s]
+[0m14:14:41.569278 [debug] [Thread-2 (]: Began running node test.xero_dbt.not_null_bronze_xero_invoices_invoice_id.c52dc83a47
+[0m14:14:41.569547 [info ] [Thread-1 (]: 13 of 40 PASS unique_bronze_stripe_balance_transactions_id ..................... [[32mPASS[0m in 0.03s]
+[0m14:14:41.572258 [debug] [Thread-4 (]: Finished running node test.xero_dbt.accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY.5dd22ac85a
+[0m14:14:41.572012 [info ] [Thread-3 (]: 15 of 40 PASS unique_bronze_stripe_payouts_id .................................. [[32mPASS[0m in 0.04s]
+[0m14:14:41.572517 [info ] [Thread-2 (]: 17 of 40 START test not_null_bronze_xero_invoices_invoice_id ................... [RUN]
+[0m14:14:41.572789 [debug] [Thread-1 (]: Finished running node test.xero_dbt.unique_bronze_stripe_balance_transactions_id.ec30a7a9ad
+[0m14:14:41.572985 [debug] [Thread-4 (]: Began running node test.xero_dbt.unique_bronze_xero_invoices_invoice_id.b581afa80b
+[0m14:14:41.573233 [debug] [Thread-3 (]: Finished running node test.xero_dbt.unique_bronze_stripe_payouts_id.67dd438ed5
+[0m14:14:41.573429 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.xero_dbt.not_null_bronze_stripe_payouts_id.34b8ee38b9, now test.xero_dbt.not_null_bronze_xero_invoices_invoice_id.c52dc83a47)
+[0m14:14:41.573627 [debug] [Thread-1 (]: Began running node model.xero_dbt.silver_xero_bank_transactions
+[0m14:14:41.573824 [info ] [Thread-4 (]: 18 of 40 START test unique_bronze_xero_invoices_invoice_id ..................... [RUN]
+[0m14:14:41.574061 [debug] [Thread-3 (]: Began running node model.xero_dbt.gold_stripe_movement
+[0m14:14:41.574239 [debug] [Thread-2 (]: Began compiling node test.xero_dbt.not_null_bronze_xero_invoices_invoice_id.c52dc83a47
+[0m14:14:41.574486 [info ] [Thread-1 (]: 19 of 40 START sql table model public_silver.silver_xero_bank_transactions ..... [RUN]
+[0m14:14:41.574667 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.xero_dbt.accepted_values_bronze_xero_invoices_type__ACCREC__ACCPAY.5dd22ac85a, now test.xero_dbt.unique_bronze_xero_invoices_invoice_id.b581afa80b)
+[0m14:14:41.574867 [info ] [Thread-3 (]: 20 of 40 START sql view model public_gold.gold_stripe_movement ................. [RUN]
+[0m14:14:41.576896 [debug] [Thread-2 (]: Writing injected SQL for node "test.xero_dbt.not_null_bronze_xero_invoices_invoice_id.c52dc83a47"
+[0m14:14:41.577086 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.xero_dbt.unique_bronze_stripe_balance_transactions_id.ec30a7a9ad, now model.xero_dbt.silver_xero_bank_transactions)
+[0m14:14:41.577263 [debug] [Thread-4 (]: Began compiling node test.xero_dbt.unique_bronze_xero_invoices_invoice_id.b581afa80b
+[0m14:14:41.577429 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.xero_dbt.unique_bronze_stripe_payouts_id.67dd438ed5, now model.xero_dbt.gold_stripe_movement)
+[0m14:14:41.577627 [debug] [Thread-1 (]: Began compiling node model.xero_dbt.silver_xero_bank_transactions
+[0m14:14:41.579359 [debug] [Thread-4 (]: Writing injected SQL for node "test.xero_dbt.unique_bronze_xero_invoices_invoice_id.b581afa80b"
+[0m14:14:41.579560 [debug] [Thread-3 (]: Began compiling node model.xero_dbt.gold_stripe_movement
+[0m14:14:41.581392 [debug] [Thread-1 (]: Writing injected SQL for node "model.xero_dbt.silver_xero_bank_transactions"
+[0m14:14:41.582776 [debug] [Thread-3 (]: Writing injected SQL for node "model.xero_dbt.gold_stripe_movement"
+[0m14:14:41.582960 [debug] [Thread-2 (]: Began executing node test.xero_dbt.not_null_bronze_xero_invoices_invoice_id.c52dc83a47
+[0m14:14:41.583255 [debug] [Thread-4 (]: Began executing node test.xero_dbt.unique_bronze_xero_invoices_invoice_id.b581afa80b
+[0m14:14:41.584311 [debug] [Thread-2 (]: Writing runtime sql for node "test.xero_dbt.not_null_bronze_xero_invoices_invoice_id.c52dc83a47"
+[0m14:14:41.585516 [debug] [Thread-4 (]: Writing runtime sql for node "test.xero_dbt.unique_bronze_xero_invoices_invoice_id.b581afa80b"
+[0m14:14:41.585776 [debug] [Thread-1 (]: Began executing node model.xero_dbt.silver_xero_bank_transactions
+[0m14:14:41.587304 [debug] [Thread-1 (]: Writing runtime sql for node "model.xero_dbt.silver_xero_bank_transactions"
+[0m14:14:41.587537 [debug] [Thread-2 (]: Using postgres connection "test.xero_dbt.not_null_bronze_xero_invoices_invoice_id.c52dc83a47"
+[0m14:14:41.587755 [debug] [Thread-2 (]: On test.xero_dbt.not_null_bronze_xero_invoices_invoice_id.c52dc83a47: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.not_null_bronze_xero_invoices_invoice_id.c52dc83a47"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select invoice_id
+from "xero_smoke"."public_bronze"."bronze_xero_invoices"
+where invoice_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.587930 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:14:41.588115 [debug] [Thread-4 (]: Using postgres connection "test.xero_dbt.unique_bronze_xero_invoices_invoice_id.b581afa80b"
+[0m14:14:41.588360 [debug] [Thread-4 (]: On test.xero_dbt.unique_bronze_xero_invoices_invoice_id.b581afa80b: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.unique_bronze_xero_invoices_invoice_id.b581afa80b"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    invoice_id as unique_field,
+    count(*) as n_records
+
+from "xero_smoke"."public_bronze"."bronze_xero_invoices"
+where invoice_id is not null
+group by invoice_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.588541 [debug] [Thread-3 (]: Began executing node model.xero_dbt.gold_stripe_movement
+[0m14:14:41.588748 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:14:41.595223 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.silver_xero_bank_transactions"
+[0m14:14:41.598238 [debug] [Thread-3 (]: Writing runtime sql for node "model.xero_dbt.gold_stripe_movement"
+[0m14:14:41.598493 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.011 seconds
+[0m14:14:41.598726 [debug] [Thread-1 (]: On model.xero_dbt.silver_xero_bank_transactions: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_xero_bank_transactions"} */
+
+  
+    
+
+  create  table "xero_smoke"."public_silver"."silver_xero_bank_transactions__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    t.transaction_id,
+    t.type,
+    t.status,
+    t.transaction_date,
+    -- normalize: RECEIVE is cash in, SPEND is cash out
+    CASE t.type
+        WHEN 'RECEIVE' THEN  t.amount
+        WHEN 'SPEND'   THEN -t.amount
+        ELSE t.amount
+    END                          AS signed_amount,
+    t.amount                     AS gross_amount,
+    t.bank_account_id,
+    t.bank_account_name,
+    t.reference,
+    t.is_reconciled,
+    t.currency_code,
+    t.contact_id,
+    t.contact_name,
+    a.code                       AS account_code,
+    a.name                       AS account_name,
+    a.class                      AS account_class,
+    t.line_items,
+    t.updated_at
+FROM "xero_smoke"."public_bronze"."bronze_xero_bank_transactions"  t
+LEFT JOIN "xero_smoke"."public_bronze"."bronze_xero_accounts"      a
+    ON t.bank_account_id = a.account_id
+WHERE t.status = 'AUTHORISED'
+  );
+  
+[0m14:14:41.599574 [debug] [Thread-2 (]: On test.xero_dbt.not_null_bronze_xero_invoices_invoice_id.c52dc83a47: ROLLBACK
+[0m14:14:41.599768 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:14:41.600067 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.gold_stripe_movement"
+[0m14:14:41.600256 [debug] [Thread-3 (]: On model.xero_dbt.gold_stripe_movement: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_stripe_movement"} */
+
+  create view "xero_smoke"."public_gold"."gold_stripe_movement__dbt_tmp"
+    
+    
+  as (
+    
+
+-- WTD Stripe activity broken down by reporting category
+WITH week_start AS (
+    SELECT DATE_TRUNC('week', CURRENT_DATE)::DATE AS wk
+)
+
+SELECT
+    bt.reporting_category,
+    bt.currency,
+    COUNT(*)            AS transaction_count,
+    SUM(bt.amount)      AS gross_amount,
+    SUM(bt.fee)         AS total_fees,
+    SUM(bt.net)         AS net_amount,
+    MIN(bt.created)     AS earliest,
+    MAX(bt.created)     AS latest
+FROM "xero_smoke"."public_bronze"."bronze_stripe_balance_transactions" bt
+CROSS JOIN week_start w
+WHERE bt.created::DATE >= w.wk
+GROUP BY 1, 2
+ORDER BY ABS(SUM(bt.net)) DESC
+  );
+[0m14:14:41.600439 [debug] [Thread-2 (]: On test.xero_dbt.not_null_bronze_xero_invoices_invoice_id.c52dc83a47: Close
+[0m14:14:41.600614 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:14:41.600968 [info ] [Thread-2 (]: 17 of 40 PASS not_null_bronze_xero_invoices_invoice_id ......................... [[32mPASS[0m in 0.03s]
+[0m14:14:41.601257 [debug] [Thread-2 (]: Finished running node test.xero_dbt.not_null_bronze_xero_invoices_invoice_id.c52dc83a47
+[0m14:14:41.601446 [debug] [Thread-2 (]: Began running node model.xero_dbt.silver_stripe_payouts
+[0m14:14:41.601785 [info ] [Thread-2 (]: 21 of 40 START sql table model public_silver.silver_stripe_payouts ............. [RUN]
+[0m14:14:41.602041 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.xero_dbt.not_null_bronze_xero_invoices_invoice_id.c52dc83a47, now model.xero_dbt.silver_stripe_payouts)
+[0m14:14:41.602226 [debug] [Thread-2 (]: Began compiling node model.xero_dbt.silver_stripe_payouts
+[0m14:14:41.604451 [debug] [Thread-2 (]: Writing injected SQL for node "model.xero_dbt.silver_stripe_payouts"
+[0m14:14:41.604802 [debug] [Thread-2 (]: Began executing node model.xero_dbt.silver_stripe_payouts
+[0m14:14:41.606670 [debug] [Thread-2 (]: Writing runtime sql for node "model.xero_dbt.silver_stripe_payouts"
+[0m14:14:41.607232 [debug] [Thread-2 (]: Using postgres connection "model.xero_dbt.silver_stripe_payouts"
+[0m14:14:41.607444 [debug] [Thread-2 (]: On model.xero_dbt.silver_stripe_payouts: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_stripe_payouts"} */
+
+  
+    
+
+  create  table "xero_smoke"."public_silver"."silver_stripe_payouts__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+SELECT
+    p.id                        AS payout_id,
+    p.amount,
+    p.currency,
+    p.arrival_date::DATE        AS arrival_date,
+    p.created::DATE             AS created_date,
+    p.description,
+    p.status,
+    p.method,
+    p.source_type,
+    p.failure_code,
+    p.failure_message,
+    -- gross / fee / net from the matching balance transaction
+    COALESCE(bt.amount, p.amount)  AS gross_amount,
+    COALESCE(bt.fee,    0)         AS stripe_fee,
+    COALESCE(bt.net,    p.amount)  AS net_amount
+FROM "xero_smoke"."public_bronze"."bronze_stripe_payouts"            p
+LEFT JOIN "xero_smoke"."public_bronze"."bronze_stripe_balance_transactions" bt
+    ON bt.source = p.id
+   AND bt.type   = 'payout'
+  );
+  
+[0m14:14:41.607668 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:14:41.607981 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.019 seconds
+[0m14:14:41.608773 [debug] [Thread-4 (]: On test.xero_dbt.unique_bronze_xero_invoices_invoice_id.b581afa80b: ROLLBACK
+[0m14:14:41.609014 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.008 seconds
+[0m14:14:41.610514 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.gold_stripe_movement"
+[0m14:14:41.610691 [debug] [Thread-1 (]: SQL status: SELECT 21 in 0.011 seconds
+[0m14:14:41.610867 [debug] [Thread-4 (]: On test.xero_dbt.unique_bronze_xero_invoices_invoice_id.b581afa80b: Close
+[0m14:14:41.611061 [debug] [Thread-3 (]: On model.xero_dbt.gold_stripe_movement: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_stripe_movement"} */
+alter table "xero_smoke"."public_gold"."gold_stripe_movement__dbt_tmp" rename to "gold_stripe_movement"
+[0m14:14:41.612612 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.silver_xero_bank_transactions"
+[0m14:14:41.612925 [info ] [Thread-4 (]: 18 of 40 PASS unique_bronze_xero_invoices_invoice_id ........................... [[32mPASS[0m in 0.04s]
+[0m14:14:41.613151 [debug] [Thread-1 (]: On model.xero_dbt.silver_xero_bank_transactions: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_xero_bank_transactions"} */
+alter table "xero_smoke"."public_silver"."silver_xero_bank_transactions__dbt_tmp" rename to "silver_xero_bank_transactions"
+[0m14:14:41.613427 [debug] [Thread-4 (]: Finished running node test.xero_dbt.unique_bronze_xero_invoices_invoice_id.b581afa80b
+[0m14:14:41.613597 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:14:41.614424 [debug] [Thread-3 (]: On model.xero_dbt.gold_stripe_movement: COMMIT
+[0m14:14:41.614602 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.gold_stripe_movement"
+[0m14:14:41.614772 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:14:41.614935 [debug] [Thread-3 (]: On model.xero_dbt.gold_stripe_movement: COMMIT
+[0m14:14:41.615107 [debug] [Thread-4 (]: Began running node model.xero_dbt.silver_xero_ap
+[0m14:14:41.615808 [debug] [Thread-1 (]: On model.xero_dbt.silver_xero_bank_transactions: COMMIT
+[0m14:14:41.615996 [debug] [Thread-2 (]: SQL status: SELECT 3 in 0.008 seconds
+[0m14:14:41.616251 [info ] [Thread-4 (]: 22 of 40 START sql table model public_silver.silver_xero_ap .................... [RUN]
+[0m14:14:41.616442 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.silver_xero_bank_transactions"
+[0m14:14:41.617784 [debug] [Thread-2 (]: Using postgres connection "model.xero_dbt.silver_stripe_payouts"
+[0m14:14:41.617948 [debug] [Thread-3 (]: SQL status: COMMIT in 0.002 seconds
+[0m14:14:41.618118 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.xero_dbt.unique_bronze_xero_invoices_invoice_id.b581afa80b, now model.xero_dbt.silver_xero_ap)
+[0m14:14:41.618287 [debug] [Thread-1 (]: On model.xero_dbt.silver_xero_bank_transactions: COMMIT
+[0m14:14:41.618454 [debug] [Thread-2 (]: On model.xero_dbt.silver_stripe_payouts: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_stripe_payouts"} */
+alter table "xero_smoke"."public_silver"."silver_stripe_payouts__dbt_tmp" rename to "silver_stripe_payouts"
+[0m14:14:41.619415 [debug] [Thread-3 (]: Applying DROP to: "xero_smoke"."public_gold"."gold_stripe_movement__dbt_backup"
+[0m14:14:41.619588 [debug] [Thread-4 (]: Began compiling node model.xero_dbt.silver_xero_ap
+[0m14:14:41.621301 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.gold_stripe_movement"
+[0m14:14:41.621490 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m14:14:41.622777 [debug] [Thread-4 (]: Writing injected SQL for node "model.xero_dbt.silver_xero_ap"
+[0m14:14:41.622955 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.003 seconds
+[0m14:14:41.623130 [debug] [Thread-3 (]: On model.xero_dbt.gold_stripe_movement: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_stripe_movement"} */
+drop view if exists "xero_smoke"."public_gold"."gold_stripe_movement__dbt_backup" cascade
+[0m14:14:41.624084 [debug] [Thread-1 (]: Applying DROP to: "xero_smoke"."public_silver"."silver_xero_bank_transactions__dbt_backup"
+[0m14:14:41.624821 [debug] [Thread-2 (]: On model.xero_dbt.silver_stripe_payouts: COMMIT
+[0m14:14:41.625221 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.silver_xero_bank_transactions"
+[0m14:14:41.625415 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m14:14:41.625580 [debug] [Thread-2 (]: Using postgres connection "model.xero_dbt.silver_stripe_payouts"
+[0m14:14:41.625756 [debug] [Thread-1 (]: On model.xero_dbt.silver_xero_bank_transactions: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_xero_bank_transactions"} */
+drop table if exists "xero_smoke"."public_silver"."silver_xero_bank_transactions__dbt_backup" cascade
+[0m14:14:41.626355 [debug] [Thread-3 (]: On model.xero_dbt.gold_stripe_movement: Close
+[0m14:14:41.626563 [debug] [Thread-2 (]: On model.xero_dbt.silver_stripe_payouts: COMMIT
+[0m14:14:41.626729 [debug] [Thread-4 (]: Began executing node model.xero_dbt.silver_xero_ap
+[0m14:14:41.627002 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b316b70>]}
+[0m14:14:41.628786 [debug] [Thread-4 (]: Writing runtime sql for node "model.xero_dbt.silver_xero_ap"
+[0m14:14:41.628967 [debug] [Thread-2 (]: SQL status: COMMIT in 0.002 seconds
+[0m14:14:41.629179 [debug] [Thread-1 (]: SQL status: DROP TABLE in 0.002 seconds
+[0m14:14:41.629417 [info ] [Thread-3 (]: 20 of 40 OK created sql view model public_gold.gold_stripe_movement ............ [[32mCREATE VIEW[0m in 0.05s]
+[0m14:14:41.630386 [debug] [Thread-2 (]: Applying DROP to: "xero_smoke"."public_silver"."silver_stripe_payouts__dbt_backup"
+[0m14:14:41.630983 [debug] [Thread-1 (]: On model.xero_dbt.silver_xero_bank_transactions: Close
+[0m14:14:41.631238 [debug] [Thread-3 (]: Finished running node model.xero_dbt.gold_stripe_movement
+[0m14:14:41.631619 [debug] [Thread-2 (]: Using postgres connection "model.xero_dbt.silver_stripe_payouts"
+[0m14:14:41.631824 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.silver_xero_ap"
+[0m14:14:41.632029 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b316c90>]}
+[0m14:14:41.632212 [debug] [Thread-3 (]: Began running node model.xero_dbt.silver_xero_ar
+[0m14:14:41.632407 [debug] [Thread-2 (]: On model.xero_dbt.silver_stripe_payouts: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_stripe_payouts"} */
+drop table if exists "xero_smoke"."public_silver"."silver_stripe_payouts__dbt_backup" cascade
+[0m14:14:41.632627 [debug] [Thread-4 (]: On model.xero_dbt.silver_xero_ap: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_xero_ap"} */
+
+  
+    
+
+  create  table "xero_smoke"."public_silver"."silver_xero_ap__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- AP = ACCPAY invoices that are AUTHORISED or PAID
+SELECT
+    invoice_id,
+    invoice_number,
+    reference,
+    invoice_date,
+    due_date,
+    CURRENT_DATE - due_date                          AS days_overdue,
+    CASE
+        WHEN due_date IS NULL OR CURRENT_DATE <= due_date THEN 'not_due'
+        WHEN CURRENT_DATE - due_date BETWEEN 1 AND 30     THEN '1-30'
+        WHEN CURRENT_DATE - due_date BETWEEN 31 AND 60    THEN '31-60'
+        ELSE '60+'
+    END                                              AS aging_bucket,
+    status,
+    contact_id,
+    contact_name,
+    sub_total,
+    total_tax,
+    total,
+    amount_due,
+    amount_paid,
+    currency_code,
+    updated_at
+FROM "xero_smoke"."public_bronze"."bronze_xero_invoices"
+WHERE type = 'ACCPAY'
+  AND status IN ('AUTHORISED', 'PAID')
+  );
+  
+[0m14:14:41.632930 [info ] [Thread-1 (]: 19 of 40 OK created sql table model public_silver.silver_xero_bank_transactions  [[32mSELECT 21[0m in 0.05s]
+[0m14:14:41.633119 [info ] [Thread-3 (]: 23 of 40 START sql table model public_silver.silver_xero_ar .................... [RUN]
+[0m14:14:41.633373 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:14:41.633545 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m14:14:41.633791 [debug] [Thread-1 (]: Finished running node model.xero_dbt.silver_xero_bank_transactions
+[0m14:14:41.633965 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.xero_dbt.gold_stripe_movement, now model.xero_dbt.silver_xero_ar)
+[0m14:14:41.634606 [debug] [Thread-2 (]: On model.xero_dbt.silver_stripe_payouts: Close
+[0m14:14:41.634857 [debug] [Thread-3 (]: Began compiling node model.xero_dbt.silver_xero_ar
+[0m14:14:41.635024 [debug] [Thread-1 (]: Began running node test.xero_dbt.not_null_silver_xero_bank_transactions_signed_amount.178d53c112
+[0m14:14:41.635249 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b316270>]}
+[0m14:14:41.637209 [debug] [Thread-3 (]: Writing injected SQL for node "model.xero_dbt.silver_xero_ar"
+[0m14:14:41.637437 [info ] [Thread-1 (]: 24 of 40 START test not_null_silver_xero_bank_transactions_signed_amount ....... [RUN]
+[0m14:14:41.637747 [info ] [Thread-2 (]: 21 of 40 OK created sql table model public_silver.silver_stripe_payouts ........ [[32mSELECT 3[0m in 0.03s]
+[0m14:14:41.637977 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.xero_dbt.silver_xero_bank_transactions, now test.xero_dbt.not_null_silver_xero_bank_transactions_signed_amount.178d53c112)
+[0m14:14:41.638221 [debug] [Thread-2 (]: Finished running node model.xero_dbt.silver_stripe_payouts
+[0m14:14:41.638403 [debug] [Thread-1 (]: Began compiling node test.xero_dbt.not_null_silver_xero_bank_transactions_signed_amount.178d53c112
+[0m14:14:41.638584 [debug] [Thread-2 (]: Began running node test.xero_dbt.not_null_silver_xero_bank_transactions_transaction_id.5c039a7cf0
+[0m14:14:41.640488 [debug] [Thread-1 (]: Writing injected SQL for node "test.xero_dbt.not_null_silver_xero_bank_transactions_signed_amount.178d53c112"
+[0m14:14:41.640751 [info ] [Thread-2 (]: 25 of 40 START test not_null_silver_xero_bank_transactions_transaction_id ...... [RUN]
+[0m14:14:41.640966 [debug] [Thread-3 (]: Began executing node model.xero_dbt.silver_xero_ar
+[0m14:14:41.641176 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.xero_dbt.silver_stripe_payouts, now test.xero_dbt.not_null_silver_xero_bank_transactions_transaction_id.5c039a7cf0)
+[0m14:14:41.642764 [debug] [Thread-3 (]: Writing runtime sql for node "model.xero_dbt.silver_xero_ar"
+[0m14:14:41.642949 [debug] [Thread-4 (]: SQL status: SELECT 3 in 0.010 seconds
+[0m14:14:41.643116 [debug] [Thread-2 (]: Began compiling node test.xero_dbt.not_null_silver_xero_bank_transactions_transaction_id.5c039a7cf0
+[0m14:14:41.644829 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.silver_xero_ap"
+[0m14:14:41.646526 [debug] [Thread-2 (]: Writing injected SQL for node "test.xero_dbt.not_null_silver_xero_bank_transactions_transaction_id.5c039a7cf0"
+[0m14:14:41.646753 [debug] [Thread-4 (]: On model.xero_dbt.silver_xero_ap: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_xero_ap"} */
+alter table "xero_smoke"."public_silver"."silver_xero_ap__dbt_tmp" rename to "silver_xero_ap"
+[0m14:14:41.646932 [debug] [Thread-1 (]: Began executing node test.xero_dbt.not_null_silver_xero_bank_transactions_signed_amount.178d53c112
+[0m14:14:41.647139 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.silver_xero_ar"
+[0m14:14:41.648394 [debug] [Thread-1 (]: Writing runtime sql for node "test.xero_dbt.not_null_silver_xero_bank_transactions_signed_amount.178d53c112"
+[0m14:14:41.648580 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:14:41.648776 [debug] [Thread-3 (]: On model.xero_dbt.silver_xero_ar: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_xero_ar"} */
+
+  
+    
+
+  create  table "xero_smoke"."public_silver"."silver_xero_ar__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- AR = ACCREC invoices that are AUTHORISED or PAID
+SELECT
+    invoice_id,
+    invoice_number,
+    reference,
+    invoice_date,
+    due_date,
+    CURRENT_DATE - due_date                          AS days_overdue,
+    CASE
+        WHEN CURRENT_DATE <= due_date               THEN 'current'
+        WHEN CURRENT_DATE - due_date BETWEEN 1 AND 30  THEN '1-30'
+        WHEN CURRENT_DATE - due_date BETWEEN 31 AND 60 THEN '31-60'
+        WHEN CURRENT_DATE - due_date BETWEEN 61 AND 90 THEN '61-90'
+        ELSE '90+'
+    END                                              AS aging_bucket,
+    status,
+    contact_id,
+    contact_name,
+    sub_total,
+    total_tax,
+    total,
+    amount_due,
+    amount_paid,
+    currency_code,
+    updated_at
+FROM "xero_smoke"."public_bronze"."bronze_xero_invoices"
+WHERE type = 'ACCREC'
+  AND status IN ('AUTHORISED', 'PAID')
+  );
+  
+[0m14:14:41.649053 [debug] [Thread-2 (]: Began executing node test.xero_dbt.not_null_silver_xero_bank_transactions_transaction_id.5c039a7cf0
+[0m14:14:41.649702 [debug] [Thread-4 (]: On model.xero_dbt.silver_xero_ap: COMMIT
+[0m14:14:41.649893 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:14:41.650892 [debug] [Thread-2 (]: Writing runtime sql for node "test.xero_dbt.not_null_silver_xero_bank_transactions_transaction_id.5c039a7cf0"
+[0m14:14:41.651100 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.silver_xero_ap"
+[0m14:14:41.651340 [debug] [Thread-1 (]: Using postgres connection "test.xero_dbt.not_null_silver_xero_bank_transactions_signed_amount.178d53c112"
+[0m14:14:41.651544 [debug] [Thread-4 (]: On model.xero_dbt.silver_xero_ap: COMMIT
+[0m14:14:41.651739 [debug] [Thread-1 (]: On test.xero_dbt.not_null_silver_xero_bank_transactions_signed_amount.178d53c112: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.not_null_silver_xero_bank_transactions_signed_amount.178d53c112"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select signed_amount
+from "xero_smoke"."public_silver"."silver_xero_bank_transactions"
+where signed_amount is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.651975 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:14:41.652285 [debug] [Thread-2 (]: Using postgres connection "test.xero_dbt.not_null_silver_xero_bank_transactions_transaction_id.5c039a7cf0"
+[0m14:14:41.652489 [debug] [Thread-2 (]: On test.xero_dbt.not_null_silver_xero_bank_transactions_transaction_id.5c039a7cf0: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.not_null_silver_xero_bank_transactions_transaction_id.5c039a7cf0"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select transaction_id
+from "xero_smoke"."public_silver"."silver_xero_bank_transactions"
+where transaction_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.652695 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:14:41.652954 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m14:14:41.654015 [debug] [Thread-4 (]: Applying DROP to: "xero_smoke"."public_silver"."silver_xero_ap__dbt_backup"
+[0m14:14:41.654611 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.silver_xero_ap"
+[0m14:14:41.654831 [debug] [Thread-4 (]: On model.xero_dbt.silver_xero_ap: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_xero_ap"} */
+drop table if exists "xero_smoke"."public_silver"."silver_xero_ap__dbt_backup" cascade
+[0m14:14:41.655291 [debug] [Thread-4 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m14:14:41.655961 [debug] [Thread-4 (]: On model.xero_dbt.silver_xero_ap: Close
+[0m14:14:41.656223 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3176b0>]}
+[0m14:14:41.656523 [info ] [Thread-4 (]: 22 of 40 OK created sql table model public_silver.silver_xero_ap ............... [[32mSELECT 3[0m in 0.04s]
+[0m14:14:41.656777 [debug] [Thread-4 (]: Finished running node model.xero_dbt.silver_xero_ap
+[0m14:14:41.656988 [debug] [Thread-4 (]: Began running node test.xero_dbt.unique_silver_xero_bank_transactions_transaction_id.058dd6fdb5
+[0m14:14:41.657906 [info ] [Thread-4 (]: 26 of 40 START test unique_silver_xero_bank_transactions_transaction_id ........ [RUN]
+[0m14:14:41.658193 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.xero_dbt.silver_xero_ap, now test.xero_dbt.unique_silver_xero_bank_transactions_transaction_id.058dd6fdb5)
+[0m14:14:41.658410 [debug] [Thread-4 (]: Began compiling node test.xero_dbt.unique_silver_xero_bank_transactions_transaction_id.058dd6fdb5
+[0m14:14:41.660384 [debug] [Thread-4 (]: Writing injected SQL for node "test.xero_dbt.unique_silver_xero_bank_transactions_transaction_id.058dd6fdb5"
+[0m14:14:41.660838 [debug] [Thread-4 (]: Began executing node test.xero_dbt.unique_silver_xero_bank_transactions_transaction_id.058dd6fdb5
+[0m14:14:41.661918 [debug] [Thread-4 (]: Writing runtime sql for node "test.xero_dbt.unique_silver_xero_bank_transactions_transaction_id.058dd6fdb5"
+[0m14:14:41.662116 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m14:14:41.662347 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.010 seconds
+[0m14:14:41.663103 [debug] [Thread-2 (]: On test.xero_dbt.not_null_silver_xero_bank_transactions_transaction_id.5c039a7cf0: ROLLBACK
+[0m14:14:41.663296 [debug] [Thread-3 (]: SQL status: SELECT 10 in 0.013 seconds
+[0m14:14:41.663895 [debug] [Thread-1 (]: On test.xero_dbt.not_null_silver_xero_bank_transactions_signed_amount.178d53c112: ROLLBACK
+[0m14:14:41.667574 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.silver_xero_ar"
+[0m14:14:41.667751 [debug] [Thread-2 (]: On test.xero_dbt.not_null_silver_xero_bank_transactions_transaction_id.5c039a7cf0: Close
+[0m14:14:41.667941 [debug] [Thread-3 (]: On model.xero_dbt.silver_xero_ar: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_xero_ar"} */
+alter table "xero_smoke"."public_silver"."silver_xero_ar__dbt_tmp" rename to "silver_xero_ar"
+[0m14:14:41.668430 [debug] [Thread-4 (]: Using postgres connection "test.xero_dbt.unique_silver_xero_bank_transactions_transaction_id.058dd6fdb5"
+[0m14:14:41.668257 [info ] [Thread-2 (]: 25 of 40 PASS not_null_silver_xero_bank_transactions_transaction_id ............ [[32mPASS[0m in 0.03s]
+[0m14:14:41.668632 [debug] [Thread-1 (]: On test.xero_dbt.not_null_silver_xero_bank_transactions_signed_amount.178d53c112: Close
+[0m14:14:41.668824 [debug] [Thread-4 (]: On test.xero_dbt.unique_silver_xero_bank_transactions_transaction_id.058dd6fdb5: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.unique_silver_xero_bank_transactions_transaction_id.058dd6fdb5"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    transaction_id as unique_field,
+    count(*) as n_records
+
+from "xero_smoke"."public_silver"."silver_xero_bank_transactions"
+where transaction_id is not null
+group by transaction_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.669101 [debug] [Thread-2 (]: Finished running node test.xero_dbt.not_null_silver_xero_bank_transactions_transaction_id.5c039a7cf0
+[0m14:14:41.669262 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:14:41.669646 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:14:41.669503 [info ] [Thread-1 (]: 24 of 40 PASS not_null_silver_xero_bank_transactions_signed_amount ............. [[32mPASS[0m in 0.03s]
+[0m14:14:41.669885 [debug] [Thread-2 (]: Began running node test.xero_dbt.not_null_silver_stripe_payouts_payout_id.df05d89720
+[0m14:14:41.670579 [debug] [Thread-3 (]: On model.xero_dbt.silver_xero_ar: COMMIT
+[0m14:14:41.670877 [debug] [Thread-1 (]: Finished running node test.xero_dbt.not_null_silver_xero_bank_transactions_signed_amount.178d53c112
+[0m14:14:41.671055 [info ] [Thread-2 (]: 27 of 40 START test not_null_silver_stripe_payouts_payout_id ................... [RUN]
+[0m14:14:41.671242 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.silver_xero_ar"
+[0m14:14:41.671417 [debug] [Thread-1 (]: Began running node test.xero_dbt.unique_silver_stripe_payouts_payout_id.9ad668cefd
+[0m14:14:41.671622 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.xero_dbt.not_null_silver_xero_bank_transactions_transaction_id.5c039a7cf0, now test.xero_dbt.not_null_silver_stripe_payouts_payout_id.df05d89720)
+[0m14:14:41.671812 [debug] [Thread-3 (]: On model.xero_dbt.silver_xero_ar: COMMIT
+[0m14:14:41.671985 [info ] [Thread-1 (]: 28 of 40 START test unique_silver_stripe_payouts_payout_id ..................... [RUN]
+[0m14:14:41.672164 [debug] [Thread-2 (]: Began compiling node test.xero_dbt.not_null_silver_stripe_payouts_payout_id.df05d89720
+[0m14:14:41.672355 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.xero_dbt.not_null_silver_xero_bank_transactions_signed_amount.178d53c112, now test.xero_dbt.unique_silver_stripe_payouts_payout_id.9ad668cefd)
+[0m14:14:41.674626 [debug] [Thread-2 (]: Writing injected SQL for node "test.xero_dbt.not_null_silver_stripe_payouts_payout_id.df05d89720"
+[0m14:14:41.674823 [debug] [Thread-3 (]: SQL status: COMMIT in 0.002 seconds
+[0m14:14:41.674987 [debug] [Thread-1 (]: Began compiling node test.xero_dbt.unique_silver_stripe_payouts_payout_id.9ad668cefd
+[0m14:14:41.676018 [debug] [Thread-3 (]: Applying DROP to: "xero_smoke"."public_silver"."silver_xero_ar__dbt_backup"
+[0m14:14:41.677924 [debug] [Thread-1 (]: Writing injected SQL for node "test.xero_dbt.unique_silver_stripe_payouts_payout_id.9ad668cefd"
+[0m14:14:41.678308 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.silver_xero_ar"
+[0m14:14:41.678550 [debug] [Thread-3 (]: On model.xero_dbt.silver_xero_ar: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_xero_ar"} */
+drop table if exists "xero_smoke"."public_silver"."silver_xero_ar__dbt_backup" cascade
+[0m14:14:41.678736 [debug] [Thread-2 (]: Began executing node test.xero_dbt.not_null_silver_stripe_payouts_payout_id.df05d89720
+[0m14:14:41.678934 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m14:14:41.679125 [debug] [Thread-3 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m14:14:41.680140 [debug] [Thread-2 (]: Writing runtime sql for node "test.xero_dbt.not_null_silver_stripe_payouts_payout_id.df05d89720"
+[0m14:14:41.680845 [debug] [Thread-4 (]: On test.xero_dbt.unique_silver_xero_bank_transactions_transaction_id.058dd6fdb5: ROLLBACK
+[0m14:14:41.681030 [debug] [Thread-1 (]: Began executing node test.xero_dbt.unique_silver_stripe_payouts_payout_id.9ad668cefd
+[0m14:14:41.681628 [debug] [Thread-3 (]: On model.xero_dbt.silver_xero_ar: Close
+[0m14:14:41.682885 [debug] [Thread-1 (]: Writing runtime sql for node "test.xero_dbt.unique_silver_stripe_payouts_payout_id.9ad668cefd"
+[0m14:14:41.683058 [debug] [Thread-4 (]: On test.xero_dbt.unique_silver_xero_bank_transactions_transaction_id.058dd6fdb5: Close
+[0m14:14:41.683324 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2938f0>]}
+[0m14:14:41.683935 [debug] [Thread-2 (]: Using postgres connection "test.xero_dbt.not_null_silver_stripe_payouts_payout_id.df05d89720"
+[0m14:14:41.684114 [debug] [Thread-2 (]: On test.xero_dbt.not_null_silver_stripe_payouts_payout_id.df05d89720: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.not_null_silver_stripe_payouts_payout_id.df05d89720"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select payout_id
+from "xero_smoke"."public_silver"."silver_stripe_payouts"
+where payout_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.684284 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:14:41.683713 [info ] [Thread-4 (]: 26 of 40 PASS unique_silver_xero_bank_transactions_transaction_id .............. [[32mPASS[0m in 0.03s]
+[0m14:14:41.684520 [info ] [Thread-3 (]: 23 of 40 OK created sql table model public_silver.silver_xero_ar ............... [[32mSELECT 10[0m in 0.05s]
+[0m14:14:41.684906 [debug] [Thread-4 (]: Finished running node test.xero_dbt.unique_silver_xero_bank_transactions_transaction_id.058dd6fdb5
+[0m14:14:41.685139 [debug] [Thread-3 (]: Finished running node model.xero_dbt.silver_xero_ar
+[0m14:14:41.685314 [debug] [Thread-1 (]: Using postgres connection "test.xero_dbt.unique_silver_stripe_payouts_payout_id.9ad668cefd"
+[0m14:14:41.685510 [debug] [Thread-4 (]: Began running node test.xero_dbt.not_null_silver_xero_ap_invoice_id.2dfaba18c0
+[0m14:14:41.685689 [debug] [Thread-3 (]: Began running node test.xero_dbt.unique_silver_xero_ap_invoice_id.d19651ba85
+[0m14:14:41.685919 [debug] [Thread-1 (]: On test.xero_dbt.unique_silver_stripe_payouts_payout_id.9ad668cefd: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.unique_silver_stripe_payouts_payout_id.9ad668cefd"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    payout_id as unique_field,
+    count(*) as n_records
+
+from "xero_smoke"."public_silver"."silver_stripe_payouts"
+where payout_id is not null
+group by payout_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.686155 [info ] [Thread-4 (]: 29 of 40 START test not_null_silver_xero_ap_invoice_id ......................... [RUN]
+[0m14:14:41.686373 [info ] [Thread-3 (]: 30 of 40 START test unique_silver_xero_ap_invoice_id ........................... [RUN]
+[0m14:14:41.686563 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:14:41.686757 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.xero_dbt.unique_silver_xero_bank_transactions_transaction_id.058dd6fdb5, now test.xero_dbt.not_null_silver_xero_ap_invoice_id.2dfaba18c0)
+[0m14:14:41.686945 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly model.xero_dbt.silver_xero_ar, now test.xero_dbt.unique_silver_xero_ap_invoice_id.d19651ba85)
+[0m14:14:41.687168 [debug] [Thread-4 (]: Began compiling node test.xero_dbt.not_null_silver_xero_ap_invoice_id.2dfaba18c0
+[0m14:14:41.687336 [debug] [Thread-3 (]: Began compiling node test.xero_dbt.unique_silver_xero_ap_invoice_id.d19651ba85
+[0m14:14:41.689277 [debug] [Thread-4 (]: Writing injected SQL for node "test.xero_dbt.not_null_silver_xero_ap_invoice_id.2dfaba18c0"
+[0m14:14:41.691161 [debug] [Thread-3 (]: Writing injected SQL for node "test.xero_dbt.unique_silver_xero_ap_invoice_id.d19651ba85"
+[0m14:14:41.691573 [debug] [Thread-3 (]: Began executing node test.xero_dbt.unique_silver_xero_ap_invoice_id.d19651ba85
+[0m14:14:41.691757 [debug] [Thread-4 (]: Began executing node test.xero_dbt.not_null_silver_xero_ap_invoice_id.2dfaba18c0
+[0m14:14:41.693212 [debug] [Thread-3 (]: Writing runtime sql for node "test.xero_dbt.unique_silver_xero_ap_invoice_id.d19651ba85"
+[0m14:14:41.693443 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m14:14:41.694519 [debug] [Thread-4 (]: Writing runtime sql for node "test.xero_dbt.not_null_silver_xero_ap_invoice_id.2dfaba18c0"
+[0m14:14:41.694716 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.008 seconds
+[0m14:14:41.695494 [debug] [Thread-2 (]: On test.xero_dbt.not_null_silver_stripe_payouts_payout_id.df05d89720: ROLLBACK
+[0m14:14:41.696208 [debug] [Thread-1 (]: On test.xero_dbt.unique_silver_stripe_payouts_payout_id.9ad668cefd: ROLLBACK
+[0m14:14:41.696549 [debug] [Thread-3 (]: Using postgres connection "test.xero_dbt.unique_silver_xero_ap_invoice_id.d19651ba85"
+[0m14:14:41.696724 [debug] [Thread-1 (]: On test.xero_dbt.unique_silver_stripe_payouts_payout_id.9ad668cefd: Close
+[0m14:14:41.696904 [debug] [Thread-4 (]: Using postgres connection "test.xero_dbt.not_null_silver_xero_ap_invoice_id.2dfaba18c0"
+[0m14:14:41.697082 [debug] [Thread-3 (]: On test.xero_dbt.unique_silver_xero_ap_invoice_id.d19651ba85: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.unique_silver_xero_ap_invoice_id.d19651ba85"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    invoice_id as unique_field,
+    count(*) as n_records
+
+from "xero_smoke"."public_silver"."silver_xero_ap"
+where invoice_id is not null
+group by invoice_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.697247 [debug] [Thread-2 (]: On test.xero_dbt.not_null_silver_stripe_payouts_payout_id.df05d89720: Close
+[0m14:14:41.697442 [debug] [Thread-4 (]: On test.xero_dbt.not_null_silver_xero_ap_invoice_id.2dfaba18c0: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.not_null_silver_xero_ap_invoice_id.2dfaba18c0"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select invoice_id
+from "xero_smoke"."public_silver"."silver_xero_ap"
+where invoice_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.697700 [info ] [Thread-1 (]: 28 of 40 PASS unique_silver_stripe_payouts_payout_id ........................... [[32mPASS[0m in 0.03s]
+[0m14:14:41.697884 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:14:41.698057 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:14:41.698301 [info ] [Thread-2 (]: 27 of 40 PASS not_null_silver_stripe_payouts_payout_id ......................... [[32mPASS[0m in 0.03s]
+[0m14:14:41.698572 [debug] [Thread-1 (]: Finished running node test.xero_dbt.unique_silver_stripe_payouts_payout_id.9ad668cefd
+[0m14:14:41.698927 [debug] [Thread-2 (]: Finished running node test.xero_dbt.not_null_silver_stripe_payouts_payout_id.df05d89720
+[0m14:14:41.699123 [debug] [Thread-1 (]: Began running node test.xero_dbt.accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_.5b0ecf1a25
+[0m14:14:41.699352 [debug] [Thread-2 (]: Began running node test.xero_dbt.not_null_silver_xero_ar_invoice_id.643b68eaf4
+[0m14:14:41.699608 [info ] [Thread-1 (]: 31 of 40 START test accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_  [RUN]
+[0m14:14:41.699814 [info ] [Thread-2 (]: 32 of 40 START test not_null_silver_xero_ar_invoice_id ......................... [RUN]
+[0m14:14:41.700039 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.xero_dbt.unique_silver_stripe_payouts_payout_id.9ad668cefd, now test.xero_dbt.accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_.5b0ecf1a25)
+[0m14:14:41.700235 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.xero_dbt.not_null_silver_stripe_payouts_payout_id.df05d89720, now test.xero_dbt.not_null_silver_xero_ar_invoice_id.643b68eaf4)
+[0m14:14:41.700426 [debug] [Thread-1 (]: Began compiling node test.xero_dbt.accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_.5b0ecf1a25
+[0m14:14:41.700599 [debug] [Thread-2 (]: Began compiling node test.xero_dbt.not_null_silver_xero_ar_invoice_id.643b68eaf4
+[0m14:14:41.703050 [debug] [Thread-1 (]: Writing injected SQL for node "test.xero_dbt.accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_.5b0ecf1a25"
+[0m14:14:41.704875 [debug] [Thread-2 (]: Writing injected SQL for node "test.xero_dbt.not_null_silver_xero_ar_invoice_id.643b68eaf4"
+[0m14:14:41.705333 [debug] [Thread-1 (]: Began executing node test.xero_dbt.accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_.5b0ecf1a25
+[0m14:14:41.705524 [debug] [Thread-2 (]: Began executing node test.xero_dbt.not_null_silver_xero_ar_invoice_id.643b68eaf4
+[0m14:14:41.706598 [debug] [Thread-1 (]: Writing runtime sql for node "test.xero_dbt.accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_.5b0ecf1a25"
+[0m14:14:41.706808 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m14:14:41.707025 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m14:14:41.708356 [debug] [Thread-2 (]: Writing runtime sql for node "test.xero_dbt.not_null_silver_xero_ar_invoice_id.643b68eaf4"
+[0m14:14:41.709193 [debug] [Thread-3 (]: On test.xero_dbt.unique_silver_xero_ap_invoice_id.d19651ba85: ROLLBACK
+[0m14:14:41.710318 [debug] [Thread-4 (]: On test.xero_dbt.not_null_silver_xero_ap_invoice_id.2dfaba18c0: ROLLBACK
+[0m14:14:41.710638 [debug] [Thread-1 (]: Using postgres connection "test.xero_dbt.accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_.5b0ecf1a25"
+[0m14:14:41.710839 [debug] [Thread-3 (]: On test.xero_dbt.unique_silver_xero_ap_invoice_id.d19651ba85: Close
+[0m14:14:41.711058 [debug] [Thread-1 (]: On test.xero_dbt.accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_.5b0ecf1a25: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_.5b0ecf1a25"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        aging_bucket as value_field,
+        count(*) as n_records
+
+    from "xero_smoke"."public_silver"."silver_xero_ar"
+    group by aging_bucket
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'current','1-30','31-60','61-90','90+'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.711248 [debug] [Thread-4 (]: On test.xero_dbt.not_null_silver_xero_ap_invoice_id.2dfaba18c0: Close
+[0m14:14:41.711723 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:14:41.711906 [debug] [Thread-2 (]: Using postgres connection "test.xero_dbt.not_null_silver_xero_ar_invoice_id.643b68eaf4"
+[0m14:14:41.711571 [info ] [Thread-3 (]: 30 of 40 PASS unique_silver_xero_ap_invoice_id ................................. [[32mPASS[0m in 0.02s]
+[0m14:14:41.712212 [debug] [Thread-2 (]: On test.xero_dbt.not_null_silver_xero_ar_invoice_id.643b68eaf4: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.not_null_silver_xero_ar_invoice_id.643b68eaf4"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select invoice_id
+from "xero_smoke"."public_silver"."silver_xero_ar"
+where invoice_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.712494 [info ] [Thread-4 (]: 29 of 40 PASS not_null_silver_xero_ap_invoice_id ............................... [[32mPASS[0m in 0.03s]
+[0m14:14:41.712773 [debug] [Thread-3 (]: Finished running node test.xero_dbt.unique_silver_xero_ap_invoice_id.d19651ba85
+[0m14:14:41.712951 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:14:41.713200 [debug] [Thread-4 (]: Finished running node test.xero_dbt.not_null_silver_xero_ap_invoice_id.2dfaba18c0
+[0m14:14:41.713399 [debug] [Thread-3 (]: Began running node test.xero_dbt.unique_silver_xero_ar_invoice_id.96f23d582b
+[0m14:14:41.713712 [debug] [Thread-4 (]: Began running node model.xero_dbt.gold_cash_position
+[0m14:14:41.713932 [info ] [Thread-3 (]: 33 of 40 START test unique_silver_xero_ar_invoice_id ........................... [RUN]
+[0m14:14:41.714193 [info ] [Thread-4 (]: 34 of 40 START sql view model public_gold.gold_cash_position ................... [RUN]
+[0m14:14:41.714411 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.xero_dbt.unique_silver_xero_ap_invoice_id.d19651ba85, now test.xero_dbt.unique_silver_xero_ar_invoice_id.96f23d582b)
+[0m14:14:41.714603 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.xero_dbt.not_null_silver_xero_ap_invoice_id.2dfaba18c0, now model.xero_dbt.gold_cash_position)
+[0m14:14:41.714779 [debug] [Thread-3 (]: Began compiling node test.xero_dbt.unique_silver_xero_ar_invoice_id.96f23d582b
+[0m14:14:41.714949 [debug] [Thread-4 (]: Began compiling node model.xero_dbt.gold_cash_position
+[0m14:14:41.716961 [debug] [Thread-3 (]: Writing injected SQL for node "test.xero_dbt.unique_silver_xero_ar_invoice_id.96f23d582b"
+[0m14:14:41.718439 [debug] [Thread-4 (]: Writing injected SQL for node "model.xero_dbt.gold_cash_position"
+[0m14:14:41.718915 [debug] [Thread-4 (]: Began executing node model.xero_dbt.gold_cash_position
+[0m14:14:41.719100 [debug] [Thread-3 (]: Began executing node test.xero_dbt.unique_silver_xero_ar_invoice_id.96f23d582b
+[0m14:14:41.721019 [debug] [Thread-4 (]: Writing runtime sql for node "model.xero_dbt.gold_cash_position"
+[0m14:14:41.721222 [debug] [Thread-1 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m14:14:41.722213 [debug] [Thread-3 (]: Writing runtime sql for node "test.xero_dbt.unique_silver_xero_ar_invoice_id.96f23d582b"
+[0m14:14:41.722396 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m14:14:41.723142 [debug] [Thread-1 (]: On test.xero_dbt.accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_.5b0ecf1a25: ROLLBACK
+[0m14:14:41.723903 [debug] [Thread-2 (]: On test.xero_dbt.not_null_silver_xero_ar_invoice_id.643b68eaf4: ROLLBACK
+[0m14:14:41.724225 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.gold_cash_position"
+[0m14:14:41.724645 [debug] [Thread-4 (]: On model.xero_dbt.gold_cash_position: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_cash_position"} */
+
+  create view "xero_smoke"."public_gold"."gold_cash_position__dbt_tmp"
+    
+    
+  as (
+    
+
+-- Current cash balance by bank account (from Xero bank transactions cumulative sum)
+-- and pending Stripe float (payouts in_transit)
+WITH xero_cash AS (
+    SELECT
+        bank_account_id,
+        bank_account_name,
+        currency_code,
+        SUM(signed_amount)  AS balance
+    FROM "xero_smoke"."public_silver"."silver_xero_bank_transactions"
+    GROUP BY 1, 2, 3
+),
+
+stripe_float AS (
+    SELECT
+        currency,
+        SUM(amount)         AS pending_amount
+    FROM "xero_smoke"."public_bronze"."bronze_stripe_payouts"
+    WHERE status = 'in_transit'
+    GROUP BY 1
+)
+
+SELECT
+    'xero'                  AS source,
+    x.bank_account_name     AS account_name,
+    x.currency_code         AS currency,
+    x.balance,
+    NULL::NUMERIC           AS stripe_pending,
+    x.balance               AS total_cash
+FROM xero_cash x
+
+UNION ALL
+
+SELECT
+    'stripe_pending',
+    'Stripe In-Transit',
+    s.currency,
+    NULL,
+    s.pending_amount,
+    s.pending_amount
+FROM stripe_float s
+  );
+[0m14:14:41.724849 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:14:41.725004 [debug] [Thread-2 (]: On test.xero_dbt.not_null_silver_xero_ar_invoice_id.643b68eaf4: Close
+[0m14:14:41.725169 [debug] [Thread-1 (]: On test.xero_dbt.accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_.5b0ecf1a25: Close
+[0m14:14:41.725345 [debug] [Thread-3 (]: Using postgres connection "test.xero_dbt.unique_silver_xero_ar_invoice_id.96f23d582b"
+[0m14:14:41.725660 [info ] [Thread-2 (]: 32 of 40 PASS not_null_silver_xero_ar_invoice_id ............................... [[32mPASS[0m in 0.03s]
+[0m14:14:41.725963 [info ] [Thread-1 (]: 31 of 40 PASS accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_  [[32mPASS[0m in 0.03s]
+[0m14:14:41.726198 [debug] [Thread-3 (]: On test.xero_dbt.unique_silver_xero_ar_invoice_id.96f23d582b: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.unique_silver_xero_ar_invoice_id.96f23d582b"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    invoice_id as unique_field,
+    count(*) as n_records
+
+from "xero_smoke"."public_silver"."silver_xero_ar"
+where invoice_id is not null
+group by invoice_id
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.726549 [debug] [Thread-2 (]: Finished running node test.xero_dbt.not_null_silver_xero_ar_invoice_id.643b68eaf4
+[0m14:14:41.726805 [debug] [Thread-1 (]: Finished running node test.xero_dbt.accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_.5b0ecf1a25
+[0m14:14:41.726984 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:14:41.727185 [debug] [Thread-2 (]: Began running node model.xero_dbt.silver_stripe_reconciliation
+[0m14:14:41.727552 [info ] [Thread-2 (]: 35 of 40 START sql table model public_silver.silver_stripe_reconciliation ...... [RUN]
+[0m14:14:41.727751 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.xero_dbt.not_null_silver_xero_ar_invoice_id.643b68eaf4, now model.xero_dbt.silver_stripe_reconciliation)
+[0m14:14:41.727923 [debug] [Thread-2 (]: Began compiling node model.xero_dbt.silver_stripe_reconciliation
+[0m14:14:41.729737 [debug] [Thread-2 (]: Writing injected SQL for node "model.xero_dbt.silver_stripe_reconciliation"
+[0m14:14:41.730088 [debug] [Thread-2 (]: Began executing node model.xero_dbt.silver_stripe_reconciliation
+[0m14:14:41.731631 [debug] [Thread-2 (]: Writing runtime sql for node "model.xero_dbt.silver_stripe_reconciliation"
+[0m14:14:41.732008 [debug] [Thread-2 (]: Using postgres connection "model.xero_dbt.silver_stripe_reconciliation"
+[0m14:14:41.732221 [debug] [Thread-2 (]: On model.xero_dbt.silver_stripe_reconciliation: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_stripe_reconciliation"} */
+
+  
+    
+
+  create  table "xero_smoke"."public_silver"."silver_stripe_reconciliation__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+
+-- Matches Stripe payouts to Xero bank transactions.
+-- Match logic: same currency, amount within $0.01, date within 3 days
+-- (Stripe settlement delay is typically 2 business days).
+WITH stripe AS (
+    SELECT
+        payout_id,
+        net_amount      AS stripe_net,
+        currency,
+        arrival_date
+    FROM "xero_smoke"."public_silver"."silver_stripe_payouts"
+    WHERE status = 'paid'
+),
+
+xero AS (
+    SELECT
+        transaction_id,
+        gross_amount    AS xero_amount,
+        currency_code,
+        transaction_date,
+        is_reconciled
+    FROM "xero_smoke"."public_silver"."silver_xero_bank_transactions"
+    WHERE type = 'RECEIVE'
+)
+
+SELECT
+    s.payout_id,
+    x.transaction_id          AS xero_transaction_id,
+    s.stripe_net,
+    x.xero_amount,
+    ABS(s.stripe_net - x.xero_amount)    AS amount_diff,
+    s.arrival_date                        AS stripe_arrival_date,
+    x.transaction_date                    AS xero_date,
+    ABS(s.arrival_date - x.transaction_date) AS date_diff_days,
+    x.is_reconciled,
+    CASE
+        WHEN x.transaction_id IS NOT NULL THEN 'matched'
+        ELSE 'unmatched'
+    END AS match_status
+FROM stripe s
+LEFT JOIN xero x
+    ON  x.currency_code = s.currency
+    AND ABS(x.xero_amount - s.stripe_net) < 0.01
+    AND ABS(x.transaction_date - s.arrival_date) <= 3
+  );
+  
+[0m14:14:41.732441 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:14:41.733159 [debug] [Thread-3 (]: SQL status: SELECT 1 in 0.006 seconds
+[0m14:14:41.733325 [debug] [Thread-4 (]: SQL status: CREATE VIEW in 0.008 seconds
+[0m14:14:41.734102 [debug] [Thread-3 (]: On test.xero_dbt.unique_silver_xero_ar_invoice_id.96f23d582b: ROLLBACK
+[0m14:14:41.735704 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.gold_cash_position"
+[0m14:14:41.735911 [debug] [Thread-4 (]: On model.xero_dbt.gold_cash_position: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_cash_position"} */
+alter table "xero_smoke"."public_gold"."gold_cash_position__dbt_tmp" rename to "gold_cash_position"
+[0m14:14:41.736225 [debug] [Thread-3 (]: On test.xero_dbt.unique_silver_xero_ar_invoice_id.96f23d582b: Close
+[0m14:14:41.736675 [debug] [Thread-4 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:14:41.736527 [info ] [Thread-3 (]: 33 of 40 PASS unique_silver_xero_ar_invoice_id ................................. [[32mPASS[0m in 0.02s]
+[0m14:14:41.737427 [debug] [Thread-4 (]: On model.xero_dbt.gold_cash_position: COMMIT
+[0m14:14:41.737691 [debug] [Thread-3 (]: Finished running node test.xero_dbt.unique_silver_xero_ar_invoice_id.96f23d582b
+[0m14:14:41.737869 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.gold_cash_position"
+[0m14:14:41.738104 [debug] [Thread-4 (]: On model.xero_dbt.gold_cash_position: COMMIT
+[0m14:14:41.738322 [debug] [Thread-1 (]: Began running node model.xero_dbt.gold_ar_aging
+[0m14:14:41.738498 [debug] [Thread-3 (]: Began running node model.xero_dbt.gold_revenue_by_type
+[0m14:14:41.738728 [info ] [Thread-1 (]: 36 of 40 START sql view model public_gold.gold_ar_aging ........................ [RUN]
+[0m14:14:41.739149 [debug] [Thread-4 (]: SQL status: COMMIT in 0.001 seconds
+[0m14:14:41.739340 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.xero_dbt.accepted_values_silver_xero_ar_aging_bucket__current__1_30__31_60__61_90__90_.5b0ecf1a25, now model.xero_dbt.gold_ar_aging)
+[0m14:14:41.738940 [info ] [Thread-3 (]: 37 of 40 START sql view model public_gold.gold_revenue_by_type ................. [RUN]
+[0m14:14:41.740440 [debug] [Thread-4 (]: Applying DROP to: "xero_smoke"."public_gold"."gold_cash_position__dbt_backup"
+[0m14:14:41.740637 [debug] [Thread-2 (]: SQL status: SELECT 2 in 0.008 seconds
+[0m14:14:41.740799 [debug] [Thread-1 (]: Began compiling node model.xero_dbt.gold_ar_aging
+[0m14:14:41.741093 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.xero_dbt.unique_silver_xero_ar_invoice_id.96f23d582b, now model.xero_dbt.gold_revenue_by_type)
+[0m14:14:41.741479 [debug] [Thread-4 (]: Using postgres connection "model.xero_dbt.gold_cash_position"
+[0m14:14:41.742889 [debug] [Thread-2 (]: Using postgres connection "model.xero_dbt.silver_stripe_reconciliation"
+[0m14:14:41.744401 [debug] [Thread-1 (]: Writing injected SQL for node "model.xero_dbt.gold_ar_aging"
+[0m14:14:41.744589 [debug] [Thread-3 (]: Began compiling node model.xero_dbt.gold_revenue_by_type
+[0m14:14:41.744762 [debug] [Thread-4 (]: On model.xero_dbt.gold_cash_position: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_cash_position"} */
+drop view if exists "xero_smoke"."public_gold"."gold_cash_position__dbt_backup" cascade
+[0m14:14:41.744937 [debug] [Thread-2 (]: On model.xero_dbt.silver_stripe_reconciliation: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_stripe_reconciliation"} */
+alter table "xero_smoke"."public_silver"."silver_stripe_reconciliation__dbt_tmp" rename to "silver_stripe_reconciliation"
+[0m14:14:41.746380 [debug] [Thread-3 (]: Writing injected SQL for node "model.xero_dbt.gold_revenue_by_type"
+[0m14:14:41.746755 [debug] [Thread-1 (]: Began executing node model.xero_dbt.gold_ar_aging
+[0m14:14:41.748437 [debug] [Thread-1 (]: Writing runtime sql for node "model.xero_dbt.gold_ar_aging"
+[0m14:14:41.748653 [debug] [Thread-2 (]: SQL status: ALTER TABLE in 0.002 seconds
+[0m14:14:41.748837 [debug] [Thread-4 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m14:14:41.749484 [debug] [Thread-2 (]: On model.xero_dbt.silver_stripe_reconciliation: COMMIT
+[0m14:14:41.750101 [debug] [Thread-4 (]: On model.xero_dbt.gold_cash_position: Close
+[0m14:14:41.750276 [debug] [Thread-3 (]: Began executing node model.xero_dbt.gold_revenue_by_type
+[0m14:14:41.750458 [debug] [Thread-2 (]: Using postgres connection "model.xero_dbt.silver_stripe_reconciliation"
+[0m14:14:41.750632 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.gold_ar_aging"
+[0m14:14:41.750867 [debug] [Thread-4 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3168d0>]}
+[0m14:14:41.752405 [debug] [Thread-3 (]: Writing runtime sql for node "model.xero_dbt.gold_revenue_by_type"
+[0m14:14:41.752598 [debug] [Thread-2 (]: On model.xero_dbt.silver_stripe_reconciliation: COMMIT
+[0m14:14:41.752793 [debug] [Thread-1 (]: On model.xero_dbt.gold_ar_aging: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_ar_aging"} */
+
+  create view "xero_smoke"."public_gold"."gold_ar_aging__dbt_tmp"
+    
+    
+  as (
+    
+
+SELECT
+    aging_bucket,
+    COUNT(*)                AS invoice_count,
+    SUM(amount_due)         AS total_outstanding,
+    SUM(total)              AS total_invoiced,
+    ROUND(
+        SUM(amount_due) / NULLIF(SUM(total), 0) * 100,
+        1
+    )                       AS pct_outstanding,
+    MIN(due_date)           AS oldest_due_date,
+    ARRAY_AGG(contact_name ORDER BY amount_due DESC)
+        FILTER (WHERE amount_due > 0)
+                            AS top_customers
+FROM "xero_smoke"."public_silver"."silver_xero_ar"
+WHERE status = 'AUTHORISED'
+  AND amount_due > 0
+GROUP BY aging_bucket
+ORDER BY
+    CASE aging_bucket
+        WHEN 'current' THEN 1
+        WHEN '1-30'    THEN 2
+        WHEN '31-60'   THEN 3
+        WHEN '61-90'   THEN 4
+        WHEN '90+'     THEN 5
+    END
+  );
+[0m14:14:41.753115 [info ] [Thread-4 (]: 34 of 40 OK created sql view model public_gold.gold_cash_position .............. [[32mCREATE VIEW[0m in 0.04s]
+[0m14:14:41.753352 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:14:41.753599 [debug] [Thread-4 (]: Finished running node model.xero_dbt.gold_cash_position
+[0m14:14:41.753912 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.gold_revenue_by_type"
+[0m14:14:41.754085 [debug] [Thread-2 (]: SQL status: COMMIT in 0.001 seconds
+[0m14:14:41.754307 [debug] [Thread-3 (]: On model.xero_dbt.gold_revenue_by_type: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_revenue_by_type"} */
+
+  create view "xero_smoke"."public_gold"."gold_revenue_by_type__dbt_tmp"
+    
+    
+  as (
+    
+
+-- Weekly revenue breakdown from Xero bank transactions (INCOME class accounts)
+-- and from invoices raised this week.
+-- "WTD" = week starting Monday of the current week.
+WITH week_start AS (
+    SELECT DATE_TRUNC('week', CURRENT_DATE)::DATE AS wk
+),
+
+bank_income AS (
+    SELECT
+        t.bank_account_name  AS revenue_account,
+        t.account_class,
+        SUM(t.signed_amount) AS amount,
+        COUNT(*)             AS transaction_count
+    FROM "xero_smoke"."public_silver"."silver_xero_bank_transactions" t
+    CROSS JOIN week_start w
+    WHERE t.account_class = 'INCOME'
+      AND t.transaction_date >= w.wk
+    GROUP BY 1, 2
+),
+
+invoice_revenue AS (
+    SELECT
+        'Invoiced Revenue'   AS revenue_account,
+        'INCOME'             AS account_class,
+        SUM(total)           AS amount,
+        COUNT(*)             AS transaction_count
+    FROM "xero_smoke"."public_silver"."silver_xero_ar"
+    CROSS JOIN week_start w
+    WHERE invoice_date >= w.wk
+)
+
+SELECT
+    revenue_account,
+    account_class,
+    amount,
+    transaction_count,
+    'bank_transaction' AS source,
+    (SELECT wk FROM week_start) AS week_starting
+FROM bank_income
+
+UNION ALL
+
+SELECT
+    revenue_account,
+    account_class,
+    amount,
+    transaction_count,
+    'invoice',
+    (SELECT wk FROM week_start)
+FROM invoice_revenue
+ORDER BY amount DESC
+  );
+[0m14:14:41.755611 [debug] [Thread-2 (]: Applying DROP to: "xero_smoke"."public_silver"."silver_stripe_reconciliation__dbt_backup"
+[0m14:14:41.755808 [debug] [Thread-3 (]: Opening a new connection, currently in state closed
+[0m14:14:41.756201 [debug] [Thread-2 (]: Using postgres connection "model.xero_dbt.silver_stripe_reconciliation"
+[0m14:14:41.756596 [debug] [Thread-2 (]: On model.xero_dbt.silver_stripe_reconciliation: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.silver_stripe_reconciliation"} */
+drop table if exists "xero_smoke"."public_silver"."silver_stripe_reconciliation__dbt_backup" cascade
+[0m14:14:41.757032 [debug] [Thread-2 (]: SQL status: DROP TABLE in 0.000 seconds
+[0m14:14:41.757703 [debug] [Thread-2 (]: On model.xero_dbt.silver_stripe_reconciliation: Close
+[0m14:14:41.757990 [debug] [Thread-2 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b293950>]}
+[0m14:14:41.758295 [info ] [Thread-2 (]: 35 of 40 OK created sql table model public_silver.silver_stripe_reconciliation . [[32mSELECT 2[0m in 0.03s]
+[0m14:14:41.758617 [debug] [Thread-2 (]: Finished running node model.xero_dbt.silver_stripe_reconciliation
+[0m14:14:41.758931 [debug] [Thread-2 (]: Began running node test.xero_dbt.not_null_silver_stripe_reconciliation_payout_id.cb67f55758
+[0m14:14:41.759163 [debug] [Thread-4 (]: Began running node test.xero_dbt.accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched.b820876775
+[0m14:14:41.759335 [info ] [Thread-2 (]: 39 of 40 START test not_null_silver_stripe_reconciliation_payout_id ............ [RUN]
+[0m14:14:41.759580 [info ] [Thread-4 (]: 38 of 40 START test accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched  [RUN]
+[0m14:14:41.759804 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly model.xero_dbt.silver_stripe_reconciliation, now test.xero_dbt.not_null_silver_stripe_reconciliation_payout_id.cb67f55758)
+[0m14:14:41.759978 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly model.xero_dbt.gold_cash_position, now test.xero_dbt.accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched.b820876775)
+[0m14:14:41.760148 [debug] [Thread-2 (]: Began compiling node test.xero_dbt.not_null_silver_stripe_reconciliation_payout_id.cb67f55758
+[0m14:14:41.760320 [debug] [Thread-4 (]: Began compiling node test.xero_dbt.accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched.b820876775
+[0m14:14:41.762569 [debug] [Thread-2 (]: Writing injected SQL for node "test.xero_dbt.not_null_silver_stripe_reconciliation_payout_id.cb67f55758"
+[0m14:14:41.762781 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.009 seconds
+[0m14:14:41.764695 [debug] [Thread-4 (]: Writing injected SQL for node "test.xero_dbt.accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched.b820876775"
+[0m14:14:41.764882 [debug] [Thread-3 (]: SQL status: CREATE VIEW in 0.009 seconds
+[0m14:14:41.769152 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.gold_ar_aging"
+[0m14:14:41.770550 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.gold_revenue_by_type"
+[0m14:14:41.771851 [debug] [Thread-1 (]: On model.xero_dbt.gold_ar_aging: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_ar_aging"} */
+alter table "xero_smoke"."public_gold"."gold_ar_aging__dbt_tmp" rename to "gold_ar_aging"
+[0m14:14:41.772045 [debug] [Thread-3 (]: On model.xero_dbt.gold_revenue_by_type: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_revenue_by_type"} */
+alter table "xero_smoke"."public_gold"."gold_revenue_by_type__dbt_tmp" rename to "gold_revenue_by_type"
+[0m14:14:41.772688 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.000 seconds
+[0m14:14:41.772873 [debug] [Thread-3 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:14:41.773551 [debug] [Thread-1 (]: On model.xero_dbt.gold_ar_aging: COMMIT
+[0m14:14:41.774247 [debug] [Thread-3 (]: On model.xero_dbt.gold_revenue_by_type: COMMIT
+[0m14:14:41.774510 [debug] [Thread-4 (]: Began executing node test.xero_dbt.accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched.b820876775
+[0m14:14:41.774711 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.gold_ar_aging"
+[0m14:14:41.774875 [debug] [Thread-2 (]: Began executing node test.xero_dbt.not_null_silver_stripe_reconciliation_payout_id.cb67f55758
+[0m14:14:41.775056 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.gold_revenue_by_type"
+[0m14:14:41.776329 [debug] [Thread-4 (]: Writing runtime sql for node "test.xero_dbt.accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched.b820876775"
+[0m14:14:41.776513 [debug] [Thread-1 (]: On model.xero_dbt.gold_ar_aging: COMMIT
+[0m14:14:41.777498 [debug] [Thread-2 (]: Writing runtime sql for node "test.xero_dbt.not_null_silver_stripe_reconciliation_payout_id.cb67f55758"
+[0m14:14:41.777663 [debug] [Thread-3 (]: On model.xero_dbt.gold_revenue_by_type: COMMIT
+[0m14:14:41.778077 [debug] [Thread-4 (]: Using postgres connection "test.xero_dbt.accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched.b820876775"
+[0m14:14:41.778305 [debug] [Thread-4 (]: On test.xero_dbt.accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched.b820876775: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched.b820876775"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+with all_values as (
+
+    select
+        match_status as value_field,
+        count(*) as n_records
+
+    from "xero_smoke"."public_silver"."silver_stripe_reconciliation"
+    group by match_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'matched','unmatched'
+)
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.778498 [debug] [Thread-1 (]: SQL status: COMMIT in 0.001 seconds
+[0m14:14:41.778661 [debug] [Thread-4 (]: Opening a new connection, currently in state closed
+[0m14:14:41.778838 [debug] [Thread-2 (]: Using postgres connection "test.xero_dbt.not_null_silver_stripe_reconciliation_payout_id.cb67f55758"
+[0m14:14:41.778988 [debug] [Thread-3 (]: SQL status: COMMIT in 0.001 seconds
+[0m14:14:41.779950 [debug] [Thread-1 (]: Applying DROP to: "xero_smoke"."public_gold"."gold_ar_aging__dbt_backup"
+[0m14:14:41.780191 [debug] [Thread-2 (]: On test.xero_dbt.not_null_silver_stripe_reconciliation_payout_id.cb67f55758: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "test.xero_dbt.not_null_silver_stripe_reconciliation_payout_id.cb67f55758"} */
+
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select payout_id
+from "xero_smoke"."public_silver"."silver_stripe_reconciliation"
+where payout_id is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m14:14:41.781303 [debug] [Thread-3 (]: Applying DROP to: "xero_smoke"."public_gold"."gold_revenue_by_type__dbt_backup"
+[0m14:14:41.781663 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.gold_ar_aging"
+[0m14:14:41.781830 [debug] [Thread-2 (]: Opening a new connection, currently in state closed
+[0m14:14:41.782184 [debug] [Thread-3 (]: Using postgres connection "model.xero_dbt.gold_revenue_by_type"
+[0m14:14:41.782376 [debug] [Thread-1 (]: On model.xero_dbt.gold_ar_aging: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_ar_aging"} */
+drop view if exists "xero_smoke"."public_gold"."gold_ar_aging__dbt_backup" cascade
+[0m14:14:41.782628 [debug] [Thread-3 (]: On model.xero_dbt.gold_revenue_by_type: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_revenue_by_type"} */
+drop view if exists "xero_smoke"."public_gold"."gold_revenue_by_type__dbt_backup" cascade
+[0m14:14:41.783164 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.000 seconds
+[0m14:14:41.783909 [debug] [Thread-1 (]: On model.xero_dbt.gold_ar_aging: Close
+[0m14:14:41.784190 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad89d30>]}
+[0m14:14:41.784505 [info ] [Thread-1 (]: 36 of 40 OK created sql view model public_gold.gold_ar_aging ................... [[32mCREATE VIEW[0m in 0.04s]
+[0m14:14:41.784772 [debug] [Thread-1 (]: Finished running node model.xero_dbt.gold_ar_aging
+[0m14:14:41.784986 [debug] [Thread-3 (]: SQL status: DROP VIEW in 0.002 seconds
+[0m14:14:41.786118 [debug] [Thread-3 (]: On model.xero_dbt.gold_revenue_by_type: Close
+[0m14:14:41.786385 [debug] [Thread-3 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad8b710>]}
+[0m14:14:41.786765 [info ] [Thread-3 (]: 37 of 40 OK created sql view model public_gold.gold_revenue_by_type ............ [[32mCREATE VIEW[0m in 0.05s]
+[0m14:14:41.787025 [debug] [Thread-3 (]: Finished running node model.xero_dbt.gold_revenue_by_type
+[0m14:14:41.788101 [debug] [Thread-4 (]: SQL status: SELECT 1 in 0.009 seconds
+[0m14:14:41.788854 [debug] [Thread-4 (]: On test.xero_dbt.accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched.b820876775: ROLLBACK
+[0m14:14:41.789267 [debug] [Thread-4 (]: On test.xero_dbt.accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched.b820876775: Close
+[0m14:14:41.789647 [info ] [Thread-4 (]: 38 of 40 PASS accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched  [[32mPASS[0m in 0.03s]
+[0m14:14:41.789923 [debug] [Thread-4 (]: Finished running node test.xero_dbt.accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched.b820876775
+[0m14:14:41.790137 [debug] [Thread-2 (]: SQL status: SELECT 1 in 0.008 seconds
+[0m14:14:41.790834 [debug] [Thread-2 (]: On test.xero_dbt.not_null_silver_stripe_reconciliation_payout_id.cb67f55758: ROLLBACK
+[0m14:14:41.791232 [debug] [Thread-2 (]: On test.xero_dbt.not_null_silver_stripe_reconciliation_payout_id.cb67f55758: Close
+[0m14:14:41.791535 [info ] [Thread-2 (]: 39 of 40 PASS not_null_silver_stripe_reconciliation_payout_id .................. [[32mPASS[0m in 0.03s]
+[0m14:14:41.791799 [debug] [Thread-2 (]: Finished running node test.xero_dbt.not_null_silver_stripe_reconciliation_payout_id.cb67f55758
+[0m14:14:41.792221 [debug] [Thread-1 (]: Began running node model.xero_dbt.gold_ceo_weekly_dashboard
+[0m14:14:41.792460 [info ] [Thread-1 (]: 40 of 40 START sql view model public_gold.gold_ceo_weekly_dashboard ............ [RUN]
+[0m14:14:41.792652 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.xero_dbt.gold_ar_aging, now model.xero_dbt.gold_ceo_weekly_dashboard)
+[0m14:14:41.792808 [debug] [Thread-1 (]: Began compiling node model.xero_dbt.gold_ceo_weekly_dashboard
+[0m14:14:41.796216 [debug] [Thread-1 (]: Writing injected SQL for node "model.xero_dbt.gold_ceo_weekly_dashboard"
+[0m14:14:41.796707 [debug] [Thread-1 (]: Began executing node model.xero_dbt.gold_ceo_weekly_dashboard
+[0m14:14:41.798518 [debug] [Thread-1 (]: Writing runtime sql for node "model.xero_dbt.gold_ceo_weekly_dashboard"
+[0m14:14:41.798896 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.gold_ceo_weekly_dashboard"
+[0m14:14:41.799207 [debug] [Thread-1 (]: On model.xero_dbt.gold_ceo_weekly_dashboard: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_ceo_weekly_dashboard"} */
+
+  create view "xero_smoke"."public_gold"."gold_ceo_weekly_dashboard__dbt_tmp"
+    
+    
+  as (
+    
+
+-- ─────────────────────────────────────────────────────────────────────────────
+-- CEO / CFO Weekly Finance Dashboard
+-- Query this view every Monday after the pipeline runs.
+--
+-- Sections:
+--   1. cash         – bank balances + Stripe float
+--   2. ar_summary   – total AR due, overdue breakdown
+--   3. ap_summary   – total AP due
+--   4. revenue_wtd  – gross revenue this week
+--   5. stripe_wtd   – Stripe gross / fees / net this week
+--   6. recon_status – % of bank transactions reconciled
+-- ─────────────────────────────────────────────────────────────────────────────
+
+WITH
+
+-- 1. cash
+cash AS (
+    SELECT
+        'cash'                          AS section,
+        'Total Xero Cash'               AS metric,
+        SUM(CASE WHEN source = 'xero'   THEN total_cash END)::TEXT AS value
+    FROM "xero_smoke"."public_gold"."gold_cash_position"
+    UNION ALL
+    SELECT 'cash', 'Stripe Float (In-Transit)',
+        SUM(CASE WHEN source = 'stripe_pending' THEN total_cash END)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_cash_position"
+),
+
+-- 2. AR
+ar AS (
+    SELECT
+        'ar_summary'                    AS section,
+        'Total AR Outstanding ($)'      AS metric,
+        ROUND(SUM(total_outstanding), 2)::TEXT AS value
+    FROM "xero_smoke"."public_gold"."gold_ar_aging"
+    UNION ALL
+    SELECT 'ar_summary', 'AR Overdue 1-30 ($)',
+        ROUND(SUM(total_outstanding) FILTER (WHERE aging_bucket = '1-30'), 2)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_ar_aging"
+    UNION ALL
+    SELECT 'ar_summary', 'AR Overdue 31-60 ($)',
+        ROUND(SUM(total_outstanding) FILTER (WHERE aging_bucket = '31-60'), 2)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_ar_aging"
+    UNION ALL
+    SELECT 'ar_summary', 'AR Overdue 60+ ($)',
+        ROUND(
+            SUM(total_outstanding) FILTER (WHERE aging_bucket IN ('61-90', '90+')), 2
+        )::TEXT
+    FROM "xero_smoke"."public_gold"."gold_ar_aging"
+    UNION ALL
+    SELECT 'ar_summary', 'Open AR Invoices (count)',
+        SUM(invoice_count)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_ar_aging"
+),
+
+-- 3. AP
+ap AS (
+    SELECT
+        'ap_summary'                    AS section,
+        'Total AP Outstanding ($)'      AS metric,
+        ROUND(SUM(amount_due), 2)::TEXT AS value
+    FROM "xero_smoke"."public_silver"."silver_xero_ap"
+    WHERE status = 'AUTHORISED' AND amount_due > 0
+    UNION ALL
+    SELECT 'ap_summary', 'AP Overdue Bills (count)',
+        COUNT(*)::TEXT
+    FROM "xero_smoke"."public_silver"."silver_xero_ap"
+    WHERE status = 'AUTHORISED' AND amount_due > 0 AND days_overdue > 0
+),
+
+-- 4. Revenue WTD (from invoiced AR raised this week)
+revenue AS (
+    SELECT
+        'revenue_wtd'                   AS section,
+        'Gross Revenue Invoiced WTD ($)' AS metric,
+        ROUND(SUM(amount) FILTER (WHERE source = 'invoice'), 2)::TEXT AS value
+    FROM "xero_smoke"."public_gold"."gold_revenue_by_type"
+    UNION ALL
+    SELECT 'revenue_wtd', 'Cash Receipts WTD ($)',
+        ROUND(SUM(amount) FILTER (WHERE source = 'bank_transaction'), 2)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_revenue_by_type"
+),
+
+-- 5. Stripe WTD
+stripe AS (
+    SELECT
+        'stripe_wtd'                    AS section,
+        'Stripe Gross Charges WTD ($)'  AS metric,
+        ROUND(SUM(gross_amount) FILTER (WHERE reporting_category = 'charge'), 2)::TEXT AS value
+    FROM "xero_smoke"."public_gold"."gold_stripe_movement"
+    UNION ALL
+    SELECT 'stripe_wtd', 'Stripe Fees WTD ($)',
+        ROUND(ABS(SUM(total_fees)), 2)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_stripe_movement"
+    UNION ALL
+    SELECT 'stripe_wtd', 'Stripe Refunds WTD ($)',
+        ROUND(ABS(SUM(gross_amount)) FILTER (WHERE reporting_category = 'refund'), 2)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_stripe_movement"
+    UNION ALL
+    SELECT 'stripe_wtd', 'Stripe Net WTD ($)',
+        ROUND(SUM(net_amount), 2)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_stripe_movement"
+),
+
+-- 6. Reconciliation status (all-time, last 90 days)
+recon AS (
+    SELECT
+        'recon_status'                  AS section,
+        'Bank Txns Reconciled % (90d)'  AS metric,
+        ROUND(
+            100.0 * SUM(is_reconciled::INT) / NULLIF(COUNT(*), 0), 1
+        )::TEXT AS value
+    FROM "xero_smoke"."public_silver"."silver_xero_bank_transactions"
+    WHERE transaction_date >= CURRENT_DATE - 90
+    UNION ALL
+    SELECT 'recon_status', 'Stripe Payouts Matched %',
+        ROUND(
+            100.0 * SUM(CASE WHEN match_status = 'matched' THEN 1 END) / NULLIF(COUNT(*), 0), 1
+        )::TEXT
+    FROM "xero_smoke"."public_silver"."silver_stripe_reconciliation"
+)
+
+SELECT
+    section,
+    metric,
+    COALESCE(value, '0')    AS value,
+    CURRENT_DATE            AS report_date
+FROM (
+    SELECT * FROM cash
+    UNION ALL SELECT * FROM ar
+    UNION ALL SELECT * FROM ap
+    UNION ALL SELECT * FROM revenue
+    UNION ALL SELECT * FROM stripe
+    UNION ALL SELECT * FROM recon
+) combined
+ORDER BY section, metric
+  );
+[0m14:14:41.799508 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:14:41.806953 [debug] [Thread-1 (]: Postgres adapter: Postgres error: FILTER specified, but abs is not an aggregate function
+LINE 105:         ROUND(ABS(SUM(gross_amount)) FILTER (WHERE reporting...
+                        ^
+
+[0m14:14:41.807145 [debug] [Thread-1 (]: On model.xero_dbt.gold_ceo_weekly_dashboard: ROLLBACK
+[0m14:14:41.807579 [debug] [Thread-1 (]: On model.xero_dbt.gold_ceo_weekly_dashboard: Close
+[0m14:14:41.813583 [debug] [Thread-1 (]: Database Error in model gold_ceo_weekly_dashboard (models/gold/gold_ceo_weekly_dashboard.sql)
+  FILTER specified, but abs is not an aggregate function
+  LINE 105:         ROUND(ABS(SUM(gross_amount)) FILTER (WHERE reporting...
+                          ^
+  compiled code at target/run/xero_dbt/models/gold/gold_ceo_weekly_dashboard.sql
+[0m14:14:41.813849 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '749717b4-ef49-412e-a8e0-b9dbc855ac3e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ad89d30>]}
+[0m14:14:41.814159 [error] [Thread-1 (]: 40 of 40 ERROR creating sql view model public_gold.gold_ceo_weekly_dashboard ... [[31mERROR[0m in 0.02s]
+[0m14:14:41.814405 [debug] [Thread-1 (]: Finished running node model.xero_dbt.gold_ceo_weekly_dashboard
+[0m14:14:41.814621 [debug] [Thread-7 (]: Marking all children of 'model.xero_dbt.gold_ceo_weekly_dashboard' to be skipped because of status 'error'.  Reason: Database Error in model gold_ceo_weekly_dashboard (models/gold/gold_ceo_weekly_dashboard.sql)
+  FILTER specified, but abs is not an aggregate function
+  LINE 105:         ROUND(ABS(SUM(gross_amount)) FILTER (WHERE reporting...
+                          ^
+  compiled code at target/run/xero_dbt/models/gold/gold_ceo_weekly_dashboard.sql.
+[0m14:14:41.815403 [debug] [MainThread]: On master: COMMIT
+[0m14:14:41.815551 [debug] [MainThread]: Using postgres connection "master"
+[0m14:14:41.815671 [debug] [MainThread]: On master: COMMIT
+[0m14:14:41.815810 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:14:41.822811 [debug] [MainThread]: SQL status: COMMIT in 0.007 seconds
+[0m14:14:41.822988 [debug] [MainThread]: On master: Close
+[0m14:14:41.823185 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:14:41.823316 [debug] [MainThread]: Connection 'model.xero_dbt.gold_ceo_weekly_dashboard' was properly closed.
+[0m14:14:41.823435 [debug] [MainThread]: Connection 'test.xero_dbt.not_null_silver_stripe_reconciliation_payout_id.cb67f55758' was properly closed.
+[0m14:14:41.823548 [debug] [MainThread]: Connection 'model.xero_dbt.gold_revenue_by_type' was properly closed.
+[0m14:14:41.823658 [debug] [MainThread]: Connection 'test.xero_dbt.accepted_values_silver_stripe_reconciliation_match_status__matched__unmatched.b820876775' was properly closed.
+[0m14:14:41.823852 [info ] [MainThread]: 
+[0m14:14:41.824003 [info ] [MainThread]: Finished running 10 table models, 25 data tests, 5 view models in 0 hours 0 minutes and 0.64 seconds (0.64s).
+[0m14:14:41.826386 [debug] [MainThread]: Command end result
+[0m14:14:41.841795 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/iantristancultura/Documents/Data Engineer/AWS Cars/XERO/xero_dbt/target/manifest.json
+[0m14:14:41.842723 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/iantristancultura/Documents/Data Engineer/AWS Cars/XERO/xero_dbt/target/semantic_manifest.json
+[0m14:14:41.846374 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/iantristancultura/Documents/Data Engineer/AWS Cars/XERO/xero_dbt/target/run_results.json
+[0m14:14:41.846534 [info ] [MainThread]: 
+[0m14:14:41.846692 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m14:14:41.846825 [info ] [MainThread]: 
+[0m14:14:41.846987 [error] [MainThread]: [31mFailure in model gold_ceo_weekly_dashboard (models/gold/gold_ceo_weekly_dashboard.sql)[0m
+[0m14:14:41.847147 [error] [MainThread]:   Database Error in model gold_ceo_weekly_dashboard (models/gold/gold_ceo_weekly_dashboard.sql)
+  FILTER specified, but abs is not an aggregate function
+  LINE 105:         ROUND(ABS(SUM(gross_amount)) FILTER (WHERE reporting...
+                          ^
+  compiled code at target/run/xero_dbt/models/gold/gold_ceo_weekly_dashboard.sql
+[0m14:14:41.847270 [info ] [MainThread]: 
+[0m14:14:41.847421 [info ] [MainThread]:   compiled code at target/compiled/xero_dbt/models/gold/gold_ceo_weekly_dashboard.sql
+[0m14:14:41.847569 [info ] [MainThread]: 
+[0m14:14:41.847719 [info ] [MainThread]: Done. PASS=39 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=40
+[0m14:14:41.848001 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- MissingArgumentsPropertyInGenericTestDeprecation: 3 occurrences
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m14:14:41.860571 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": false, "command_wall_clock_time": 1.8012586, "process_in_blocks": "0", "process_kernel_time": 0.33065, "process_mem_max_rss": "157188096", "process_out_blocks": "0", "process_user_time": 2.3075}
+[0m14:14:41.860799 [debug] [MainThread]: Command `dbt build` failed at 14:14:41.860758 after 1.80 seconds
+[0m14:14:41.860996 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109731130>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b2910d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b3b7d70>]}
+[0m14:14:41.861174 [debug] [MainThread]: Flushing usage events
+[0m14:14:43.540830 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m14:15:19.209287 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a17ecf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b78b390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b78b610>]}
+
+
+============================== 14:15:19.212595 | 96e18930-baaa-4147-bbfd-1394c68efbc0 ==============================
+[0m14:15:19.212595 [info ] [MainThread]: Running with dbt=1.11.3
+[0m14:15:19.212965 [debug] [MainThread]: running dbt with arguments {'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'log_path': '/Users/iantristancultura/Documents/Data Engineer/AWS Cars/XERO/xero_dbt/logs', 'write_json': 'True', 'quiet': 'False', 'partial_parse': 'True', 'use_colors': 'True', 'version_check': 'True', 'warn_error': 'None', 'profiles_dir': '.', 'static_parser': 'True', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'fail_fast': 'False', 'invocation_command': 'dbt build --profiles-dir . --target smoke --select gold_ceo_weekly_dashboard', 'log_format': 'default', 'introspect': 'True', 'empty': 'False', 'printer_width': '80', 'debug': 'False'}
+[0m14:15:19.331877 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '96e18930-baaa-4147-bbfd-1394c68efbc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10aa95a70>]}
+[0m14:15:19.371344 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '96e18930-baaa-4147-bbfd-1394c68efbc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10963e250>]}
+[0m14:15:19.372050 [info ] [MainThread]: Registered adapter: postgres=1.10.0
+[0m14:15:19.428067 [debug] [MainThread]: checksum: 9a2a23e7f2804dc3d30f6974de09d96a2397d4a44b043c29c65ccaf5affd63bf, vars: {}, profile: , target: smoke, version: 1.11.3
+[0m14:15:19.501076 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:15:19.501521 [debug] [MainThread]: Partial parsing: updated file: xero_dbt://models/gold/gold_ceo_weekly_dashboard.sql
+[0m14:15:19.723239 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '96e18930-baaa-4147-bbfd-1394c68efbc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c6eef50>]}
+[0m14:15:19.767652 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/iantristancultura/Documents/Data Engineer/AWS Cars/XERO/xero_dbt/target/manifest.json
+[0m14:15:19.768984 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/iantristancultura/Documents/Data Engineer/AWS Cars/XERO/xero_dbt/target/semantic_manifest.json
+[0m14:15:19.791337 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '96e18930-baaa-4147-bbfd-1394c68efbc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c703890>]}
+[0m14:15:19.791582 [info ] [MainThread]: Found 15 models, 25 data tests, 6 sources, 464 macros
+[0m14:15:19.792829 [info ] [MainThread]: 
+[0m14:15:19.792993 [info ] [MainThread]: Concurrency: 4 threads (target='smoke')
+[0m14:15:19.793115 [info ] [MainThread]: 
+[0m14:15:19.793327 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:15:19.793735 [debug] [ThreadPool]: Acquiring new postgres connection 'list_xero_smoke'
+[0m14:15:19.821154 [debug] [ThreadPool]: Using postgres connection "list_xero_smoke"
+[0m14:15:19.821369 [debug] [ThreadPool]: On list_xero_smoke: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "list_xero_smoke"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:15:19.821522 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:15:19.859859 [debug] [ThreadPool]: SQL status: SELECT 7 in 0.038 seconds
+[0m14:15:19.860601 [debug] [ThreadPool]: On list_xero_smoke: Close
+[0m14:15:19.863065 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_xero_smoke, now list_xero_smoke_public_bronze)
+[0m14:15:19.863350 [debug] [ThreadPool]: Acquiring new postgres connection 'list_xero_smoke_public_silver'
+[0m14:15:19.866370 [debug] [ThreadPool]: Using postgres connection "list_xero_smoke_public_bronze"
+[0m14:15:19.866638 [debug] [ThreadPool]: Acquiring new postgres connection 'list_xero_smoke_public_gold'
+[0m14:15:19.867770 [debug] [ThreadPool]: Using postgres connection "list_xero_smoke_public_silver"
+[0m14:15:19.867957 [debug] [ThreadPool]: On list_xero_smoke_public_bronze: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "list_xero_smoke_public_bronze"} */
+select
+      'xero_smoke' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_bronze'
+    union all
+    select
+      'xero_smoke' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_bronze'
+    union all
+    select
+      'xero_smoke' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_bronze'
+  
+[0m14:15:19.868908 [debug] [ThreadPool]: Using postgres connection "list_xero_smoke_public_gold"
+[0m14:15:19.869110 [debug] [ThreadPool]: On list_xero_smoke_public_silver: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "list_xero_smoke_public_silver"} */
+select
+      'xero_smoke' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'xero_smoke' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_silver'
+    union all
+    select
+      'xero_smoke' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_silver'
+  
+[0m14:15:19.869273 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m14:15:19.869422 [debug] [ThreadPool]: On list_xero_smoke_public_gold: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "list_xero_smoke_public_gold"} */
+select
+      'xero_smoke' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'xero_smoke' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public_gold'
+    union all
+    select
+      'xero_smoke' as database,
+      matviewname as name,
+      schemaname as schema,
+      'materialized_view' as type
+    from pg_matviews
+    where schemaname ilike 'public_gold'
+  
+[0m14:15:19.869569 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:15:19.869779 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:15:19.885709 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.016 seconds
+[0m14:15:19.885888 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.016 seconds
+[0m14:15:19.886038 [debug] [ThreadPool]: SQL status: SELECT 5 in 0.017 seconds
+[0m14:15:19.886675 [debug] [ThreadPool]: On list_xero_smoke_public_gold: ROLLBACK
+[0m14:15:19.887225 [debug] [ThreadPool]: On list_xero_smoke_public_silver: ROLLBACK
+[0m14:15:19.887766 [debug] [ThreadPool]: On list_xero_smoke_public_bronze: ROLLBACK
+[0m14:15:19.888622 [debug] [ThreadPool]: On list_xero_smoke_public_gold: Close
+[0m14:15:19.888761 [debug] [ThreadPool]: On list_xero_smoke_public_bronze: Close
+[0m14:15:19.888987 [debug] [ThreadPool]: On list_xero_smoke_public_silver: Close
+[0m14:15:19.892203 [debug] [MainThread]: Using postgres connection "master"
+[0m14:15:19.892412 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "connection_name": "master"} */
+select distinct
+        dependent_namespace.nspname as dependent_schema,
+        dependent_class.relname as dependent_name,
+        referenced_namespace.nspname as referenced_schema,
+        referenced_class.relname as referenced_name
+
+    -- Query for views: views are entries in pg_class with an entry in pg_rewrite, but we avoid
+    -- a seq scan on pg_rewrite by leveraging the fact there is an "internal" row in pg_depend for
+    -- the view...
+    from pg_class as dependent_class
+    join pg_namespace as dependent_namespace on dependent_namespace.oid = dependent_class.relnamespace
+    join pg_depend as dependent_depend on dependent_depend.refobjid = dependent_class.oid
+        and dependent_depend.classid = 'pg_rewrite'::regclass
+        and dependent_depend.refclassid = 'pg_class'::regclass
+        and dependent_depend.deptype = 'i'
+
+    -- ... and via pg_depend (that has a row per column, hence the need for "distinct" above, and
+    -- making sure to exclude the internal row to avoid a view appearing to depend on itself)...
+    join pg_depend as joining_depend on joining_depend.objid = dependent_depend.objid
+        and joining_depend.classid = 'pg_rewrite'::regclass
+        and joining_depend.refclassid = 'pg_class'::regclass
+        and joining_depend.refobjid != dependent_depend.refobjid
+
+    -- ... we can find the tables they query from in pg_class, but excluding system tables. Note we
+    -- don't need need to exclude _dependent_ system tables, because they only query from other
+    -- system tables, and so are automatically excluded by excluding _referenced_ system tables
+    join pg_class as referenced_class on referenced_class.oid = joining_depend.refobjid
+    join pg_namespace as referenced_namespace on referenced_namespace.oid = referenced_class.relnamespace
+        and referenced_namespace.nspname != 'information_schema'
+        and referenced_namespace.nspname not like 'pg\_%'
+
+    order by
+        dependent_schema, dependent_name, referenced_schema, referenced_name;
+[0m14:15:19.892587 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:15:19.903875 [debug] [MainThread]: SQL status: SELECT 6 in 0.011 seconds
+[0m14:15:19.904902 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '96e18930-baaa-4147-bbfd-1394c68efbc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10beb6b30>]}
+[0m14:15:19.905112 [debug] [MainThread]: On master: ROLLBACK
+[0m14:15:19.905523 [debug] [MainThread]: On master: COMMIT
+[0m14:15:19.905654 [debug] [MainThread]: Using postgres connection "master"
+[0m14:15:19.905776 [debug] [MainThread]: On master: COMMIT
+[0m14:15:19.906448 [debug] [MainThread]: SQL status: COMMIT in 0.001 seconds
+[0m14:15:19.906573 [debug] [MainThread]: On master: Close
+[0m14:15:19.908011 [debug] [Thread-1 (]: Began running node model.xero_dbt.gold_ceo_weekly_dashboard
+[0m14:15:19.908263 [info ] [Thread-1 (]: 1 of 1 START sql view model public_gold.gold_ceo_weekly_dashboard .............. [RUN]
+[0m14:15:19.908479 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_xero_smoke_public_bronze, now model.xero_dbt.gold_ceo_weekly_dashboard)
+[0m14:15:19.908644 [debug] [Thread-1 (]: Began compiling node model.xero_dbt.gold_ceo_weekly_dashboard
+[0m14:15:19.914550 [debug] [Thread-1 (]: Writing injected SQL for node "model.xero_dbt.gold_ceo_weekly_dashboard"
+[0m14:15:19.914951 [debug] [Thread-1 (]: Began executing node model.xero_dbt.gold_ceo_weekly_dashboard
+[0m14:15:19.931754 [debug] [Thread-1 (]: Writing runtime sql for node "model.xero_dbt.gold_ceo_weekly_dashboard"
+[0m14:15:19.932202 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.gold_ceo_weekly_dashboard"
+[0m14:15:19.932508 [debug] [Thread-1 (]: On model.xero_dbt.gold_ceo_weekly_dashboard: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_ceo_weekly_dashboard"} */
+
+  create view "xero_smoke"."public_gold"."gold_ceo_weekly_dashboard__dbt_tmp"
+    
+    
+  as (
+    
+
+-- ─────────────────────────────────────────────────────────────────────────────
+-- CEO / CFO Weekly Finance Dashboard
+-- Query this view every Monday after the pipeline runs.
+--
+-- Sections:
+--   1. cash         – bank balances + Stripe float
+--   2. ar_summary   – total AR due, overdue breakdown
+--   3. ap_summary   – total AP due
+--   4. revenue_wtd  – gross revenue this week
+--   5. stripe_wtd   – Stripe gross / fees / net this week
+--   6. recon_status – % of bank transactions reconciled
+-- ─────────────────────────────────────────────────────────────────────────────
+
+WITH
+
+-- 1. cash
+cash AS (
+    SELECT
+        'cash'                          AS section,
+        'Total Xero Cash'               AS metric,
+        SUM(CASE WHEN source = 'xero'   THEN total_cash END)::TEXT AS value
+    FROM "xero_smoke"."public_gold"."gold_cash_position"
+    UNION ALL
+    SELECT 'cash', 'Stripe Float (In-Transit)',
+        SUM(CASE WHEN source = 'stripe_pending' THEN total_cash END)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_cash_position"
+),
+
+-- 2. AR
+ar AS (
+    SELECT
+        'ar_summary'                    AS section,
+        'Total AR Outstanding ($)'      AS metric,
+        ROUND(SUM(total_outstanding), 2)::TEXT AS value
+    FROM "xero_smoke"."public_gold"."gold_ar_aging"
+    UNION ALL
+    SELECT 'ar_summary', 'AR Overdue 1-30 ($)',
+        ROUND(SUM(total_outstanding) FILTER (WHERE aging_bucket = '1-30'), 2)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_ar_aging"
+    UNION ALL
+    SELECT 'ar_summary', 'AR Overdue 31-60 ($)',
+        ROUND(SUM(total_outstanding) FILTER (WHERE aging_bucket = '31-60'), 2)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_ar_aging"
+    UNION ALL
+    SELECT 'ar_summary', 'AR Overdue 60+ ($)',
+        ROUND(
+            SUM(total_outstanding) FILTER (WHERE aging_bucket IN ('61-90', '90+')), 2
+        )::TEXT
+    FROM "xero_smoke"."public_gold"."gold_ar_aging"
+    UNION ALL
+    SELECT 'ar_summary', 'Open AR Invoices (count)',
+        SUM(invoice_count)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_ar_aging"
+),
+
+-- 3. AP
+ap AS (
+    SELECT
+        'ap_summary'                    AS section,
+        'Total AP Outstanding ($)'      AS metric,
+        ROUND(SUM(amount_due), 2)::TEXT AS value
+    FROM "xero_smoke"."public_silver"."silver_xero_ap"
+    WHERE status = 'AUTHORISED' AND amount_due > 0
+    UNION ALL
+    SELECT 'ap_summary', 'AP Overdue Bills (count)',
+        COUNT(*)::TEXT
+    FROM "xero_smoke"."public_silver"."silver_xero_ap"
+    WHERE status = 'AUTHORISED' AND amount_due > 0 AND days_overdue > 0
+),
+
+-- 4. Revenue WTD (from invoiced AR raised this week)
+revenue AS (
+    SELECT
+        'revenue_wtd'                   AS section,
+        'Gross Revenue Invoiced WTD ($)' AS metric,
+        ROUND(SUM(amount) FILTER (WHERE source = 'invoice'), 2)::TEXT AS value
+    FROM "xero_smoke"."public_gold"."gold_revenue_by_type"
+    UNION ALL
+    SELECT 'revenue_wtd', 'Cash Receipts WTD ($)',
+        ROUND(SUM(amount) FILTER (WHERE source = 'bank_transaction'), 2)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_revenue_by_type"
+),
+
+-- 5. Stripe WTD
+stripe AS (
+    SELECT
+        'stripe_wtd'                    AS section,
+        'Stripe Gross Charges WTD ($)'  AS metric,
+        ROUND(SUM(gross_amount) FILTER (WHERE reporting_category = 'charge'), 2)::TEXT AS value
+    FROM "xero_smoke"."public_gold"."gold_stripe_movement"
+    UNION ALL
+    SELECT 'stripe_wtd', 'Stripe Fees WTD ($)',
+        ROUND(ABS(SUM(total_fees)), 2)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_stripe_movement"
+    UNION ALL
+    SELECT 'stripe_wtd', 'Stripe Refunds WTD ($)',
+        ROUND(ABS(SUM(gross_amount) FILTER (WHERE reporting_category = 'refund')), 2)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_stripe_movement"
+    UNION ALL
+    SELECT 'stripe_wtd', 'Stripe Net WTD ($)',
+        ROUND(SUM(net_amount), 2)::TEXT
+    FROM "xero_smoke"."public_gold"."gold_stripe_movement"
+),
+
+-- 6. Reconciliation status (all-time, last 90 days)
+recon AS (
+    SELECT
+        'recon_status'                  AS section,
+        'Bank Txns Reconciled % (90d)'  AS metric,
+        ROUND(
+            100.0 * SUM(is_reconciled::INT) / NULLIF(COUNT(*), 0), 1
+        )::TEXT AS value
+    FROM "xero_smoke"."public_silver"."silver_xero_bank_transactions"
+    WHERE transaction_date >= CURRENT_DATE - 90
+    UNION ALL
+    SELECT 'recon_status', 'Stripe Payouts Matched %',
+        ROUND(
+            100.0 * SUM(CASE WHEN match_status = 'matched' THEN 1 END) / NULLIF(COUNT(*), 0), 1
+        )::TEXT
+    FROM "xero_smoke"."public_silver"."silver_stripe_reconciliation"
+)
+
+SELECT
+    section,
+    metric,
+    COALESCE(value, '0')    AS value,
+    CURRENT_DATE            AS report_date
+FROM (
+    SELECT * FROM cash
+    UNION ALL SELECT * FROM ar
+    UNION ALL SELECT * FROM ap
+    UNION ALL SELECT * FROM revenue
+    UNION ALL SELECT * FROM stripe
+    UNION ALL SELECT * FROM recon
+) combined
+ORDER BY section, metric
+  );
+[0m14:15:19.932808 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m14:15:19.950067 [debug] [Thread-1 (]: SQL status: CREATE VIEW in 0.017 seconds
+[0m14:15:19.953151 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.gold_ceo_weekly_dashboard"
+[0m14:15:19.953339 [debug] [Thread-1 (]: On model.xero_dbt.gold_ceo_weekly_dashboard: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_ceo_weekly_dashboard"} */
+alter table "xero_smoke"."public_gold"."gold_ceo_weekly_dashboard__dbt_tmp" rename to "gold_ceo_weekly_dashboard"
+[0m14:15:19.954372 [debug] [Thread-1 (]: SQL status: ALTER TABLE in 0.001 seconds
+[0m14:15:19.961706 [debug] [Thread-1 (]: On model.xero_dbt.gold_ceo_weekly_dashboard: COMMIT
+[0m14:15:19.961894 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.gold_ceo_weekly_dashboard"
+[0m14:15:19.962048 [debug] [Thread-1 (]: On model.xero_dbt.gold_ceo_weekly_dashboard: COMMIT
+[0m14:15:19.964024 [debug] [Thread-1 (]: SQL status: COMMIT in 0.002 seconds
+[0m14:15:19.966718 [debug] [Thread-1 (]: Applying DROP to: "xero_smoke"."public_gold"."gold_ceo_weekly_dashboard__dbt_backup"
+[0m14:15:19.968845 [debug] [Thread-1 (]: Using postgres connection "model.xero_dbt.gold_ceo_weekly_dashboard"
+[0m14:15:19.969017 [debug] [Thread-1 (]: On model.xero_dbt.gold_ceo_weekly_dashboard: /* {"app": "dbt", "dbt_version": "1.11.3", "profile_name": "xero", "target_name": "smoke", "node_id": "model.xero_dbt.gold_ceo_weekly_dashboard"} */
+drop view if exists "xero_smoke"."public_gold"."gold_ceo_weekly_dashboard__dbt_backup" cascade
+[0m14:15:19.969705 [debug] [Thread-1 (]: SQL status: DROP VIEW in 0.001 seconds
+[0m14:15:19.970832 [debug] [Thread-1 (]: On model.xero_dbt.gold_ceo_weekly_dashboard: Close
+[0m14:15:19.971859 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '96e18930-baaa-4147-bbfd-1394c68efbc0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cea5300>]}
+[0m14:15:19.972154 [info ] [Thread-1 (]: 1 of 1 OK created sql view model public_gold.gold_ceo_weekly_dashboard ......... [[32mCREATE VIEW[0m in 0.06s]
+[0m14:15:19.972405 [debug] [Thread-1 (]: Finished running node model.xero_dbt.gold_ceo_weekly_dashboard
+[0m14:15:19.973084 [debug] [MainThread]: On master: COMMIT
+[0m14:15:19.973229 [debug] [MainThread]: Using postgres connection "master"
+[0m14:15:19.973361 [debug] [MainThread]: On master: COMMIT
+[0m14:15:19.973491 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:15:19.982376 [debug] [MainThread]: SQL status: COMMIT in 0.009 seconds
+[0m14:15:19.982606 [debug] [MainThread]: On master: Close
+[0m14:15:19.982823 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:15:19.982967 [debug] [MainThread]: Connection 'model.xero_dbt.gold_ceo_weekly_dashboard' was properly closed.
+[0m14:15:19.983091 [debug] [MainThread]: Connection 'list_xero_smoke_public_silver' was properly closed.
+[0m14:15:19.983204 [debug] [MainThread]: Connection 'list_xero_smoke_public_gold' was properly closed.
+[0m14:15:19.983344 [info ] [MainThread]: 
+[0m14:15:19.983488 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.19 seconds (0.19s).
+[0m14:15:19.983850 [debug] [MainThread]: Command end result
+[0m14:15:19.999340 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/iantristancultura/Documents/Data Engineer/AWS Cars/XERO/xero_dbt/target/manifest.json
+[0m14:15:20.000354 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/iantristancultura/Documents/Data Engineer/AWS Cars/XERO/xero_dbt/target/semantic_manifest.json
+[0m14:15:20.003260 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/iantristancultura/Documents/Data Engineer/AWS Cars/XERO/xero_dbt/target/run_results.json
+[0m14:15:20.003419 [info ] [MainThread]: 
+[0m14:15:20.003604 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:15:20.003745 [info ] [MainThread]: 
+[0m14:15:20.003900 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m14:15:20.006212 [debug] [MainThread]: Resource report: {"command_name": "build", "command_success": true, "command_wall_clock_time": 0.8864568, "process_in_blocks": "0", "process_kernel_time": 0.18762, "process_mem_max_rss": "148078592", "process_out_blocks": "0", "process_user_time": 1.340905}
+[0m14:15:20.006560 [debug] [MainThread]: Command `dbt build` succeeded at 14:15:20.006514 after 0.89 seconds
+[0m14:15:20.006762 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10b66e5d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cc89c80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10cc8a8e0>]}
+[0m14:15:20.006995 [debug] [MainThread]: Flushing usage events
+[0m14:15:21.308422 [debug] [MainThread]: An error was encountered while trying to flush usage events

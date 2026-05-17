@@ -1,6 +1,15 @@
 xero:
   target: dev
   outputs:
+    smoke:
+      type: postgres
+      host: localhost
+      port: 5433
+      dbname: xero_smoke
+      user: xero
+      password: xero_smoke_pw
+      schema: public
+      threads: 4
     dev:
       type: postgres
       host: "{{ env_var('RDS_PG_HOST') }}"
