@@ -1,0 +1,42 @@
+version: 2
+
+models:
+  - name: silver_xero_bank_transactions
+    description: "Authorised bank transactions with signed amount and account class"
+    columns:
+      - name: transaction_id
+        tests: [not_null, unique]
+      - name: signed_amount
+        tests: [not_null]
+
+  - name: silver_xero_ar
+    description: "AR invoices with aging buckets"
+    columns:
+      - name: invoice_id
+        tests: [not_null, unique]
+      - name: aging_bucket
+        tests:
+          - accepted_values:
+              values: ['current', '1-30', '31-60', '61-90', '90+']
+
+  - name: silver_xero_ap
+    description: "AP bills with aging buckets"
+    columns:
+      - name: invoice_id
+        tests: [not_null, unique]
+
+  - name: silver_stripe_payouts
+    description: "Stripe payouts with gross/fee/net from balance transactions"
+    columns:
+      - name: payout_id
+        tests: [not_null, unique]
+
+  - name: silver_stripe_reconciliation
+    description: "Stripe payouts matched to Xero bank transactions"
+    columns:
+      - name: payout_id
+        tests: [not_null]
+      - name: match_status
+        tests:
+          - accepted_values:
+              values: ['matched', 'unmatched']

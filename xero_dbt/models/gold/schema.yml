@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: gold_cash_position
+    description: "Current cash by bank account + Stripe in-transit float"
+
+  - name: gold_ar_aging
+    description: "AR aging buckets: current, 1-30, 31-60, 61-90, 90+"
+
+  - name: gold_revenue_by_type
+    description: "WTD revenue from invoices and bank receipts, grouped by account"
+
+  - name: gold_stripe_movement
+    description: "WTD Stripe activity: charges, fees, refunds, net by reporting category"
+
+  - name: gold_ceo_weekly_dashboard
+    description: >
+      Single-view CEO/CFO weekly finance snapshot.
+      Sections: cash, ar_summary, ap_summary, revenue_wtd, stripe_wtd, recon_status.
+      Query every Monday after the pipeline runs (06:00 UTC schedule).
+    columns:
+      - name: section
+        description: "Dashboard section identifier"
+      - name: metric
+        description: "Human-readable metric label"
+      - name: value
+        description: "Metric value as text (cast to NUMERIC for calculations)"
+      - name: report_date
+        description: "Date this row was generated"

@@ -1,0 +1,40 @@
+version: 2
+
+models:
+  - name: bronze_xero_accounts
+    description: "Xero chart of accounts (full-refresh)"
+    columns:
+      - name: account_id
+        tests: [not_null, unique]
+      - name: class
+        tests: [not_null]
+
+  - name: bronze_xero_bank_transactions
+    description: "Xero bank transactions excluding DELETED"
+    columns:
+      - name: transaction_id
+        tests: [not_null, unique]
+      - name: transaction_date
+        tests: [not_null]
+
+  - name: bronze_xero_invoices
+    description: "Xero invoices (AR + AP) excluding DELETED/VOIDED"
+    columns:
+      - name: invoice_id
+        tests: [not_null, unique]
+      - name: type
+        tests:
+          - accepted_values:
+              values: ['ACCREC', 'ACCPAY']
+
+  - name: bronze_stripe_balance_transactions
+    description: "Stripe balance transaction ledger (amounts in dollars)"
+    columns:
+      - name: id
+        tests: [not_null, unique]
+
+  - name: bronze_stripe_payouts
+    description: "Stripe payouts to bank (amounts in dollars)"
+    columns:
+      - name: id
+        tests: [not_null, unique]

@@ -1,0 +1,8 @@
+dagster
+dagster-dbt
+dagster-webserver
+dbt-postgres
+boto3
+psycopg2-binary
+requests
+stripe

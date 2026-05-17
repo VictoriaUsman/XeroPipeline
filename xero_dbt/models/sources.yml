@@ -1,0 +1,19 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: public
+    description: "Raw tables populated by Dagster Xero/Stripe/bank assets"
+    tables:
+      - name: xero_accounts_raw
+        description: "Xero chart of accounts, full-refresh weekly"
+      - name: xero_bank_transactions_raw
+        description: "Xero bank transactions, incremental 8-day window"
+      - name: xero_invoices_raw
+        description: "Xero invoices (AR ACCREC + AP ACCPAY), incremental 8-day window"
+      - name: stripe_balance_transactions_raw
+        description: "Stripe balance transaction ledger, incremental 8-day window"
+      - name: stripe_payouts_raw
+        description: "Stripe payouts to bank, incremental 8-day window"
+      - name: bank_statements_raw
+        description: "Bank statement rows uploaded manually as CSV to S3"

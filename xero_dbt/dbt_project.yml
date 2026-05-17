@@ -1,0 +1,22 @@
+name: 'xero_dbt'
+version: '1.0.0'
+
+profile: 'xero'
+
+model-paths: ["models"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  xero_dbt:
+    bronze:
+      +materialized: table
+      +schema: bronze
+    silver:
+      +materialized: table
+      +schema: silver
+    gold:
+      +materialized: view
+      +schema: gold

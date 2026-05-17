@@ -1,0 +1,2 @@
+load_from:
+  - python_package: xero_pipeline_dagster
